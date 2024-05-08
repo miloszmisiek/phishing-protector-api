@@ -8,7 +8,7 @@ from app.tools.domains_details import get_domain_details
 from app.tools.async_files_functions import check_tld, count_tld, is_url_shortened
 from app.tools.check_blacklists import google_safebrowsing
 from app.tools.get_number_of_resolved_ips import get_number_of_resolved_ips
-from services.constants import CHARS_LEXICAL, KEYWORDS
+from app.services.constants import CHARS_LEXICAL, KEYWORDS
 from app.tools.get_asn_from_ip import get_asn_number
 from app.tools.is_email_in_url import is_email_in_url
 from app.tools.contains_keywords import contains_keywords
