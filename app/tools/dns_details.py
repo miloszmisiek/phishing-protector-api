@@ -1,3 +1,5 @@
+import configparser
+import os
 import certifi
 import motor.motor_asyncio
 from aiolimiter import AsyncLimiter
@@ -5,8 +7,12 @@ import aiodns
 from datetime import datetime
 from bson.json_util import dumps
 
+# load the configuration
+config = configparser.ConfigParser()
+config.read(os.path.abspath(os.path.join("config.ini")))
+
 mongo_client = motor.motor_asyncio.AsyncIOMotorClient(
-    "mongodb+srv://miloszworkspace:sxCkAUAFwpDLYt3O@security-app.gwc1b1q.mongodb.net/securityData?retryWrites=true&w=majority&appName=security-app", tlsCAFile=certifi.where())
+     config['MONGODB']['DB_URI'], tlsCAFile=certifi.where())
 database = mongo_client.securityData
 dns_collection = database.dnsRecords
 

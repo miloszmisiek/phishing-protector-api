@@ -3,17 +3,17 @@ import aiohttp
 import certifi
 import ssl
 
-from tools.async_files_functions import write_error
-
 config = configparser.ConfigParser()
 config.read('config.ini')
+
 
 async def google_safebrowsing(url):
     client_id = config.get('safebrowsing', 'client_id')
     version = config.get('safebrowsing', 'version')
     api_key = config.get('safebrowsing', 'api_key')
     platform_types = ['ANY_PLATFORM']
-    threat_types = ['THREAT_TYPE_UNSPECIFIED', 'MALWARE', 'SOCIAL_ENGINEERING', 'UNWANTED_SOFTWARE', 'POTENTIALLY_HARMFUL_APPLICATION']
+    threat_types = ['THREAT_TYPE_UNSPECIFIED', 'MALWARE', 'SOCIAL_ENGINEERING',
+                    'UNWANTED_SOFTWARE', 'POTENTIALLY_HARMFUL_APPLICATION']
     threat_entry_types = ['URL']
     api_url = f'https://safebrowsing.googleapis.com/v4/threatMatches:find?key={api_key}'
     threat_entries = [{'url': url}]
@@ -43,9 +43,7 @@ async def google_safebrowsing(url):
                     return 1 if responseData else 0
                 else:
                     print(f"Failed to query Google Safebrowsing API for {url}")
-                    await write_error(f"Failed to query Google Safebrowsing API for {url}")
-                    return None
+                    return -1
         except Exception as e:
             print(f"Error querying Google Safebrowsing API for {url}: {e}")
-            await write_error(f"Error querying Google Safebrowsing API for {url}: {e}")
-            return None
+            return -1

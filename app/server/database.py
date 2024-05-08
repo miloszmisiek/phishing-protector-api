@@ -8,6 +8,7 @@ import pandas as pd
 import tldextract
 from tools.check_twitter_url import check_twitter_link
 from tools.extract_features import extract_features
+import joblib
 
 # load the configuration
 config = configparser.ConfigParser()
@@ -18,8 +19,7 @@ columns_to_drop = ['url', 'asn', 'qty_and_domain', 'qty_asterisk_domain', 'qty_a
                    'qty_hashtag_domain', 'qty_hashtag_path', 'qty_hashtag_query', 'qty_percent_domain', 'qty_plus_domain', 'qty_questionmark_domain', 'qty_questionmark_path', 'qty_slash_domain', 'qty_space_domain', 'qty_tilde_domain', 'qty_tilde_query', 'qty_underline_domain']
 
 # Load the model
-with open('./MLPClassifier.pickle.dat', 'rb') as model_file:
-    model = pickle.load(model_file)
+model = joblib.load("app/server/MLPClassifier.pickle.dat")
 
 # connect to the MongoDB database
 mongo_client = motor.motor_asyncio.AsyncIOMotorClient(

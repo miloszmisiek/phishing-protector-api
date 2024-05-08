@@ -2,9 +2,6 @@ import geoip2.database
 import ipaddress
 import asyncio
 import aiodns
-from tools.async_files_functions import write_error
-
-PATH = '/Users/miloszmisiek/Desktop/zut/magisterka/machine_learning/datasets/'
 
 def valid_ip(host):
     """Check if the domain has a valid IP format (IPv4 or IPv6)."""
@@ -32,11 +29,10 @@ async def get_asn_number(host):
         return response
     except Exception as e:
         print(f"Error processing asn for {host}: {e}")
-        await write_error(f"Error processing asn for {host}: {e}")
         return -1
 
 def read_asn_number(ip):
     """Synchronously reads ASN number using geoip2."""
-    with geoip2.database.Reader(PATH + 'GeoLite2-ASN.mmdb') as reader:
+    with geoip2.database.Reader('app/services/GeoLite2-ASN.mmdb') as reader:
         response = reader.asn(ip)
         return response.autonomous_system_number

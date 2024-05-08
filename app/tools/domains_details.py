@@ -1,18 +1,18 @@
-import asyncio
+import configparser
+import os
 import asyncwhois
 import certifi
-from numpy import who
 import whois
-import tldextract
-import json
 from datetime import datetime, timezone
-from tools.async_files_functions import write_error
 from aiolimiter import AsyncLimiter
 import motor.motor_asyncio
-from bson.json_util import dumps
+
+# load the configuration
+config = configparser.ConfigParser()
+config.read(os.path.abspath(os.path.join("config.ini")))
 
 mongo_client = motor.motor_asyncio.AsyncIOMotorClient(
-    "mongodb+srv://miloszworkspace:sxCkAUAFwpDLYt3O@security-app.gwc1b1q.mongodb.net/securityData?retryWrites=true&w=majority&appName=security-app", tlsCAFile=certifi.where())
+    config['MONGODB']['DB_URI'], tlsCAFile=certifi.where())
 database = mongo_client.securityData
 domain_collection = database.whoisRecords
 
@@ -75,7 +75,6 @@ async def get_domain_details(domain):
             await domain_collection.insert_one({"domain": domain, **normalize_whois_data(parsed_dict)})
             print(
                 f"Normalizing WHOIS data for {domain}: {normalize_whois_data(parsed_dict)}")
-            # whois_data[domain] = normalize_whois_data(parsed_dict)s
 
         current_time = datetime.now().astimezone()
         age_in_days, days_until_expiration = 0, 0
@@ -107,26 +106,4 @@ async def get_domain_details(domain):
     except Exception as e:
         error_msg = f"Error processing {domain}: {e}"
         print(error_msg)
-        await write_error(error_msg)
-        # whois_data[domain] = {'error': str(e)}
         return (0, 0)
-
-
-async def process_domains(domains):
-    # Load the local WHOIS data
-    try:
-        with open("whois_results.json", 'r') as file:
-            whois_data = json.load(file)
-    except FileNotFoundError:
-        whois_data = {}
-
-    # Create a task for each domain to get details
-    tasks = [get_domain_details(domain, whois_data) for domain in domains]
-    results = await asyncio.gather(*tasks)
-    return results
-
-# Example usage
-if __name__ == "__main__":
-    domains = ["example.com", "stackoverflow.com"]
-    domain_details = asyncio.run(process_domains(domains))
-    print(domain_details)

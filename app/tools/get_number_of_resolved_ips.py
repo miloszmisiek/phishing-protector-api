@@ -1,8 +1,5 @@
 import socket
 import asyncio
-import tldextract
-
-from tools.async_files_functions import write_error
 
 async def get_number_of_resolved_ips(domain):
     try:
@@ -16,14 +13,4 @@ async def get_number_of_resolved_ips(domain):
         return len(unique_ips)
     except Exception as e:
         print(f"Error resolving ips for {domain}: {e}")
-        await write_error(f"Error resolving ips for {domain}: {e}")
         return -1
-    
-async def process_domains(urls):
-    # Extract the domain from each URL
-    domains = [f"{tldextract.extract(url).domain}.{tldextract.extract(url).suffix}" for url in urls]
-    
-    # Create a task for each domain
-    tasks = [get_number_of_resolved_ips(domain) for domain in domains]
-    results = await asyncio.gather(*tasks)
-    return results

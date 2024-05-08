@@ -1,4 +1,3 @@
-import asyncio
 from urllib import parse
 from urllib.parse import parse_qs, urlparse
 import aiohttp
@@ -93,8 +92,3 @@ async def extract_features(url):
     features['redirect_count'] = redirect_count
 
     return features
-
-
-async def extract_features_for_all(urls):
-    tasks = [extract_features(url) for url in urls]
-    return await asyncio.gather(*tasks)
