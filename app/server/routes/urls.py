@@ -1,12 +1,12 @@
 from fastapi import APIRouter, Body
 from fastapi.encoders import jsonable_encoder
 
-from server.database import (
+from app.server.database import (
     predict_model,
     add_to_whitelist,
     add_to_blacklist
 )
-from server.models.urls import (
+from app.server.models.urls import (
     ErrorResponseModel,
     ResponseModel,
     UrlsData
