@@ -2,19 +2,19 @@ from urllib import parse
 from urllib.parse import parse_qs, urlparse
 import aiohttp
 import tldextract
-from tools.check_redirection import check_redirects
-from tools.dns_details import get_dns_details
-from tools.domains_details import get_domain_details
-from tools.async_files_functions import check_tld, count_tld, is_url_shortened
-from tools.check_blacklists import google_safebrowsing
-from tools.get_number_of_resolved_ips import get_number_of_resolved_ips
+from app.tools.check_redirection import check_redirects
+from app.tools.dns_details import get_dns_details
+from app.tools.domains_details import get_domain_details
+from app.tools.async_files_functions import check_tld, count_tld, is_url_shortened
+from app.tools.check_blacklists import google_safebrowsing
+from app.tools.get_number_of_resolved_ips import get_number_of_resolved_ips
 from services.constants import CHARS_LEXICAL, KEYWORDS
-from tools.get_asn_from_ip import get_asn_number
-from tools.is_email_in_url import is_email_in_url
-from tools.contains_keywords import contains_keywords
-from tools.is_domain_ip_address import is_domain_ip_address
-from tools.count_vowels import count_vowels
-from tools.count_chars import count_chars
+from app.tools.get_asn_from_ip import get_asn_number
+from app.tools.is_email_in_url import is_email_in_url
+from app.tools.contains_keywords import contains_keywords
+from app.tools.is_domain_ip_address import is_domain_ip_address
+from app.tools.count_vowels import count_vowels
+from app.tools.count_chars import count_chars
 
 
 def start_url(url):

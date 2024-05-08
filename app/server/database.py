@@ -3,8 +3,8 @@ import motor.motor_asyncio
 import asyncio
 import pandas as pd
 import tldextract
-from tools.check_twitter_url import check_twitter_link
-from tools.extract_features import extract_features
+from app.tools.check_twitter_url import check_twitter_link
+from app.tools.extract_features import extract_features
 import joblib
 from decouple import config
 

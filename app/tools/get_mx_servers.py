@@ -1,5 +1,5 @@
 import aiodns
-from tools.async_files_functions import write_error
+from app.tools.async_files_functions import write_error
 
 async def get_mx_count(domain):
     resolver = aiodns.DNSResolver()
