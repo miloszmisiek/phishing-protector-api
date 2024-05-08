@@ -1,4 +1,3 @@
-import configparser
 import os
 import asyncwhois
 import certifi
@@ -6,13 +5,13 @@ import whois
 from datetime import datetime, timezone
 from aiolimiter import AsyncLimiter
 import motor.motor_asyncio
+from decouple import config
 
 # load the configuration
-config = configparser.ConfigParser()
-config.read(os.path.abspath(os.path.join("config.ini")))
+DB_URI = config("DB_URI")
 
 mongo_client = motor.motor_asyncio.AsyncIOMotorClient(
-    config['MONGODB']['DB_URI'], tlsCAFile=certifi.where())
+    DB_URI, tlsCAFile=certifi.where())
 database = mongo_client.securityData
 domain_collection = database.whoisRecords
 

@@ -1,16 +1,16 @@
-import configparser
 import aiohttp
 import certifi
 import ssl
 
-config = configparser.ConfigParser()
-config.read('config.ini')
+from decouple import config
+
+# load the configuration
 
 
 async def google_safebrowsing(url):
-    client_id = config.get('safebrowsing', 'client_id')
-    version = config.get('safebrowsing', 'version')
-    api_key = config.get('safebrowsing', 'api_key')
+    client_id = config("GOOGLE_SAFE_BROWSING_CLIENT_ID")
+    version = config("GOOGLE_SAFE_BROWSING_VERSION")
+    api_key = config("GOOGLE_SAFE_BROWSING_API_KEY")
     platform_types = ['ANY_PLATFORM']
     threat_types = ['THREAT_TYPE_UNSPECIFIED', 'MALWARE', 'SOCIAL_ENGINEERING',
                     'UNWANTED_SOFTWARE', 'POTENTIALLY_HARMFUL_APPLICATION']

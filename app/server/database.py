@@ -1,18 +1,15 @@
-import configparser
-import os
 import certifi
 import motor.motor_asyncio
 import asyncio
-import pickle
 import pandas as pd
 import tldextract
 from tools.check_twitter_url import check_twitter_link
 from tools.extract_features import extract_features
 import joblib
+from decouple import config
 
 # load the configuration
-config = configparser.ConfigParser()
-config.read(os.path.abspath(os.path.join("config.ini")))
+DB_URI=config("DB_URI")
 
 # constants
 columns_to_drop = ['url', 'asn', 'qty_and_domain', 'qty_asterisk_domain', 'qty_asterisk_path', 'qty_asterisk_query', 'qty_asterisk_url', 'qty_at_domain', 'qty_comma_domain', 'qty_dollar_domain', 'qty_dollar_path', 'qty_equal_domain', 'qty_exclamation_domain',
@@ -23,7 +20,7 @@ model = joblib.load("app/server/MLPClassifier.pickle.dat")
 
 # connect to the MongoDB database
 mongo_client = motor.motor_asyncio.AsyncIOMotorClient(
-    config['MONGODB']['DB_URI'], tlsCAFile=certifi.where())
+    DB_URI, tlsCAFile=certifi.where())
 database = mongo_client.securityData
 dns_collection = database.dnsRecords
 

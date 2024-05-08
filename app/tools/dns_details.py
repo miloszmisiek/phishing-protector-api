@@ -1,4 +1,3 @@
-import configparser
 import os
 import certifi
 import motor.motor_asyncio
@@ -6,13 +5,13 @@ from aiolimiter import AsyncLimiter
 import aiodns
 from datetime import datetime
 from bson.json_util import dumps
+from decouple import config
 
 # load the configuration
-config = configparser.ConfigParser()
-config.read(os.path.abspath(os.path.join("config.ini")))
+DB_URI = config("DB_URI")
 
 mongo_client = motor.motor_asyncio.AsyncIOMotorClient(
-     config['MONGODB']['DB_URI'], tlsCAFile=certifi.where())
+    DB_URI, tlsCAFile=certifi.where())
 database = mongo_client.securityData
 dns_collection = database.dnsRecords
 
@@ -86,7 +85,8 @@ async def get_dns_details(domain):
 
                     # Cache the results
                     result = await dns_collection.insert_one({"domain": domain, **result_dict[domain]})
-                    print(f"Cached DNS data for {domain}: {result.inserted_id}")
+                    print(
+                        f"Cached DNS data for {domain}: {result.inserted_id}")
 
                     return (is_spf, mx_count, ns_count, ttl_num if ttl_num else 0)
 
