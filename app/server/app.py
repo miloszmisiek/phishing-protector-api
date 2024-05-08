@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from server.routes.urls import router as UrlsRouter
+from app.server.routes.urls import router as UrlsRouter
 
 origins = ['https://twitter.com',
            'chrome-extension://gefeonighpcjgmdlhanednlikmdabpfg']
