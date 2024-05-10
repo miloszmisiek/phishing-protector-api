@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.server.routes.urls import router as UrlsRouter
 
 origins = ['https://twitter.com',
-           'chrome-extension://gefeonighpcjgmdlhanednlikmdabpfg']
+           'chrome-extension://gefeonighpcjgmdlhanednlikmdabpfg', 'chrome-extension://kkmfcnoeffmmfiplcjmfciphjkibfekg']
 
 app = FastAPI()
 app.add_middleware(
