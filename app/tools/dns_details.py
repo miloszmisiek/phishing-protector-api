@@ -26,7 +26,7 @@ def default_serializer(obj):
 
 
 async def get_dns_details(domain):
-    """Performs DNS queries for a given domain using cached data if available."""
+    """Performs DNS queries for a given domain using mongo data if available."""
     resolver = aiodns.DNSResolver()
     try:
         dns_data = await dns_collection.find_one({"domain": domain})
@@ -83,7 +83,7 @@ async def get_dns_details(domain):
                         f"TTL records for {domain}: {result_dict[domain]['A']}")
                     ttl_num = result_dict[domain]['A'][0]
 
-                    # Cache the results
+                    # Save the results to database
                     result = await dns_collection.insert_one({"domain": domain, **result_dict[domain]})
                     print(
                         f"Cached DNS data for {domain}: {result.inserted_id}")

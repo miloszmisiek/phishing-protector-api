@@ -16,7 +16,7 @@ columns_to_drop = ['url', 'asn', 'qty_and_domain', 'qty_asterisk_domain', 'qty_a
                    'qty_hashtag_domain', 'qty_hashtag_path', 'qty_hashtag_query', 'qty_percent_domain', 'qty_plus_domain', 'qty_questionmark_domain', 'qty_questionmark_path', 'qty_slash_domain', 'qty_space_domain', 'qty_tilde_domain', 'qty_tilde_query', 'qty_underline_domain']
 
 # Load the model
-model = joblib.load("app/server/MLPClassifier.pickle.dat")
+model = joblib.load("app/server/XGBoostClassifier-best-model.pickle.dat")
 
 # connect to the MongoDB database
 mongo_client = motor.motor_asyncio.AsyncIOMotorClient(
@@ -66,7 +66,7 @@ async def predict_model(urls: list):
             features_df.drop(columns_to_drop, axis=1, inplace=True)
             prediction_probas = model.predict_proba(features_df)
             positive_class_proba = prediction_probas[:, 1][0]
-            predictions[url] = positive_class_proba
+            predictions[url] = float(positive_class_proba)
 
     return {'predictions': predictions}
 

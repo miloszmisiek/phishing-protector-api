@@ -1,6 +1,6 @@
-from typing import Optional, List
+from typing import List
 
-from pydantic import BaseModel, EmailStr, Field
+from pydantic import BaseModel, Field
 
 
 class UrlsData(BaseModel):
