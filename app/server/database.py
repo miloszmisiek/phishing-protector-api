@@ -26,7 +26,6 @@ dns_collection = database.dnsRecords
 
 # helpers
 
-
 async def extract_features_for_all(urls: list):
     tasks = [extract_features(url) for url in urls]
     return await asyncio.gather(*tasks)

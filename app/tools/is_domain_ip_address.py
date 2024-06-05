@@ -15,7 +15,7 @@ def is_domain_ip_address(url):
         domain_or_ip = extracted.domain
         
         # In cases where the URL is directly an IP address, tldextract might not work as expected
-        # So we also try parsing the netloc part directly
+        # So try parsing the netloc part directly
         parsed_url = urlparse(url)
         netloc = parsed_url.netloc
         

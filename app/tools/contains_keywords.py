@@ -11,9 +11,6 @@ def contains_keywords(url, keywords):
     # Extract the domain from the URL
     extracted = tldextract.extract(url)
     domain = f"{extracted.domain}.{extracted.suffix}"
-    
-    # Alternatively, for simple use cases, you might directly work with the netloc part from urlparse
-    # netloc = urlparse(url).netloc
 
     # Check if any of the keywords are in the domain
     return any(keyword in domain for keyword in keywords)

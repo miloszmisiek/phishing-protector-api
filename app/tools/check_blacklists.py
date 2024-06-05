@@ -4,9 +4,6 @@ import ssl
 
 from decouple import config
 
-# load the configuration
-
-
 async def google_safebrowsing(url):
     client_id = config("GOOGLE_SAFE_BROWSING_CLIENT_ID")
     version = config("GOOGLE_SAFE_BROWSING_VERSION")
