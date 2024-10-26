@@ -1,5 +1,6 @@
 import aiodns
-from app.tools.async_files_functions import write_error
+from app.services.logger import logger
+
 
 async def get_ttl_of_hostname(hostname):
     resolver = aiodns.DNSResolver()
@@ -14,6 +15,5 @@ async def get_ttl_of_hostname(hostname):
         else:
             return None  # No A records found
     except Exception as e:
-        print(f"Error querying A records for {hostname} (ttl): {e}")
-        await write_error(f"Error querying A records for {hostname} (ttl): {e}")
+        logger.error(f"[get_ttl_of_hostname] Error querying A records for {hostname} (ttl): {e}")
         return None  # Return None if there's an error

@@ -4,7 +4,7 @@ import ssl
 
 from decouple import config
 
-async def google_safebrowsing(url):
+async def google_safebrowsing(url: str) -> int:
     client_id = config("GOOGLE_SAFE_BROWSING_CLIENT_ID")
     version = config("GOOGLE_SAFE_BROWSING_VERSION")
     api_key = config("GOOGLE_SAFE_BROWSING_API_KEY")

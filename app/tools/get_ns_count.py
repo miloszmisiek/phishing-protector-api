@@ -1,5 +1,6 @@
 import aiodns
-from app.tools.async_files_functions import write_error
+
+from app.services.logger import logger
 
 async def get_ns_count(domain):
     resolver = aiodns.DNSResolver()
@@ -9,6 +10,5 @@ async def get_ns_count(domain):
         # Return the count of resolved NS records
         return len(ns_records)
     except Exception as e:
-        print(f"Error querying NS records for {domain}: {e}")
-        await write_error(f"Error querying NS records for {domain}: {e}")
+        logger.error(f"Error querying NS records for {domain}: {e}")
         return -1

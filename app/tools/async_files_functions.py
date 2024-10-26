@@ -1,6 +1,8 @@
 import asyncio
 import re
 import aiofiles
+from app.services.logger import logger
+
 
 semaphore = asyncio.Semaphore(100)
 
@@ -28,17 +30,17 @@ async def check_tld(query):
         tld_pattern = r"\b(" + "|".join(map(re.escape, tlds)) + r")\b"
         pattern = re.compile(tld_pattern)
         if pattern.search(query.lower()):
-            print(f"Matched TLD: {pattern.search(query.lower()).group()}")
+            logger.info(f"[check_tld] Matched TLD: {pattern.search(query.lower()).group()}")
             return 1
         else:
-            print(f"No TLD found for query: {query}")
+            logger.warning(f"check_tld] No TLD found for query: {query}")
     return 0
 
 
 async def is_url_shortened(domain):
     """Check if the domain is a shortener asynchronously."""
     async with semaphore:
-        print(f"Checking shorted url for {domain}")
+        logger.info(f"[is_url_shortened] Checking shorted url for {domain}")
         async with aiofiles.open('app/services/shorteners.txt', 'r') as file:
             async for line in file:
                 with_www = "www." + line.strip()

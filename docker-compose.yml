@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  fastapi-app:
+    image: fastapi-app 
+    build: .
+    ports:
+      - "8000:8080"
+    environment:
+      - GOOGLE_SAFE_BROWSING_CLIENT_ID=${GOOGLE_SAFE_BROWSING_CLIENT_ID}
+      - GOOGLE_SAFE_BROWSING_API_KEY=${GOOGLE_SAFE_BROWSING_API_KEY}
+      - GOOGLE_SAFE_BROWSING_VERSION=${GOOGLE_SAFE_BROWSING_VERSION}
+      - DB_URI=${DB_URI}
+    volumes:
+      - .:/app  # optional, to sync local files with the container

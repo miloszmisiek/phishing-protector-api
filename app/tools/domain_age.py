@@ -4,7 +4,8 @@ import whois
 import tldextract
 import json
 from datetime import datetime, timezone
-from app.tools.async_files_functions import write_error
+
+from app.services.logger import logger
 
 
 async def get_domain_age_in_days(domain, whois_data, retries=3, backoff=1):
@@ -27,16 +28,14 @@ async def get_domain_age_in_days(domain, whois_data, retries=3, backoff=1):
                     await asyncio.sleep(backoff)
                     backoff *= 2  # Exponential backoff
         except Exception as e:
-            print(f"Error with async WHOIS for {domain}: {e}")
-            await write_error(f"Error with async WHOIS for {domain}: {e}")
+            logger.error(f"Error with async WHOIS for {domain}: {e}")
 
         if not creation_date:  # If asyncwhois failed, fall back to synchronous whois
             try:
                 result = whois.whois(domain)
                 creation_date = result.creation_date
             except Exception as e:
-                print(f"Error with synchronous WHOIS for {domain}: {e}")
-                await write_error(f"Error with synchronous WHOIS for {domain}: {e}")
+                logger.error(f"Error with synchronous WHOIS for {domain}: {e}")
 
     if creation_date:
         if isinstance(creation_date, list):

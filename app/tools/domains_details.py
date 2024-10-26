@@ -6,6 +6,7 @@ from datetime import datetime, timezone
 from aiolimiter import AsyncLimiter
 import motor.motor_asyncio
 from decouple import config
+from app.services.logger import logger
 
 # load the configuration
 DB_URI = config("DB_URI")
@@ -46,33 +47,30 @@ def normalize_whois_data(whois_dict):
 
 
 async def get_domain_details(domain):
-    print(f"Processing {domain}")
+    logger.info(f"Processing {domain} in get_domain_details")
     try:
         domain_data = await domain_collection.find_one({"domain": domain})
         if domain_data:
-            print(f"Using mongo WHOIS data for {domain}")
+            logger.info(f"Using mongo WHOIS data for {domain} in get_domain_details")
             creation_date = domain_data.get('created')
             expiration_date = domain_data.get('expires')
-            print(f"Creation date for {domain}: {creation_date}")
-            print(f"Expiration date for {domain}: {expiration_date}")
-
         else:
             async with limiter:
                 try:
                     # Asynchronous WHOIS query
-                    print(f"Running async WHOIS for {domain}")
+                    logger.info(f"Running async WHOIS for {domain} in get_domain_details")
                     _, parsed_dict = await asyncwhois.aio_whois(domain)
                     creation_date = parsed_dict.get('created')
                     expiration_date = parsed_dict.get('expires')
                 except Exception as async_error:
-                    print(
-                        f"Async WHOIS failed for {domain}, attempting sync WHOIS: {async_error}")
+                    logger.error(
+                        f"Async WHOIS failed in get_domain_details for {domain}, attempting sync WHOIS: {async_error}")
                     # Fallback to synchronous whois
                     parsed_dict = whois.whois(domain)
                     creation_date = parsed_dict.creation_date
                     expiration_date = parsed_dict.expiration_date
             await domain_collection.insert_one({"domain": domain, **normalize_whois_data(parsed_dict)})
-            print(
+            logger.info(
                 f"Normalizing WHOIS data for {domain}: {normalize_whois_data(parsed_dict)}")
 
         current_time = datetime.now().astimezone()
@@ -104,5 +102,5 @@ async def get_domain_details(domain):
 
     except Exception as e:
         error_msg = f"Error processing {domain}: {e}"
-        print(error_msg)
+        logger.error(error_msg)
         return (0, 0)

@@ -1,6 +1,6 @@
 import tldextract
 
-def contains_keywords(url, keywords):
+def contains_keywords(url:str, keywords: list) -> bool:
     """
     Check if the domain of a URL contains any of the specified keywords.
 

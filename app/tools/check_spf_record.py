@@ -1,8 +1,9 @@
 import aiodns
 
-from app.tools.async_files_functions import write_error
+from app.services.logger import logger
 
-async def check_spf_record_async(domain):
+
+async def check_spf_record_async(domain: str) -> bool:
     """
     Asynchronously check if the given domain has an SPF record in its DNS settings.
 
@@ -17,6 +18,5 @@ async def check_spf_record_async(domain):
                 return True
         return False
     except Exception as e:  # Catching a broad exception as aiodns can raise different exceptions based on the environment
-        print(f"Error querying SPF record for {domain}: {e}")
-        await write_error(f"Error querying SPF record for {domain}: {e}")
+        logger.error(f"Error querying SPF record for {domain}: {e}")        
         return False

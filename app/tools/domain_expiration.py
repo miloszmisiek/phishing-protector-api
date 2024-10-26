@@ -4,7 +4,7 @@ import tldextract
 from datetime import datetime
 from pprint import pprint
 
-from app.tools.async_files_functions import write_error
+from app.services.logger import logger
 
 async def get_domain_expiration_in_days(domain):
     try:
@@ -21,8 +21,7 @@ async def get_domain_expiration_in_days(domain):
         else:
             return None
     except Exception as e:
-        print(f"Error processing {domain} by aio_whois in get_domain_expiration_in_days: {e}")
-        await write_error(f"Error processing {domain} by aio_whois in get_domain_expiration_in_days: {e}")
+        logger.error(f"Error processing {domain} by aio_whois in get_domain_expiration_in_days: {e}")
         return None
 async def process_domains_for_expiration(urls):
     # Extract the domain from each URL

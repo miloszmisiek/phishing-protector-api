@@ -7,6 +7,8 @@ from datetime import datetime
 from bson.json_util import dumps
 from decouple import config
 
+from app.services.logger import logger
+
 # load the configuration
 DB_URI = config("DB_URI")
 
@@ -31,7 +33,7 @@ async def get_dns_details(domain):
     try:
         dns_data = await dns_collection.find_one({"domain": domain})
         if dns_data:
-            print(f"Using mongo DNS data for {domain}")
+            logger.info(f"Using mongo DNS data for {domain}")
             txt_records = dns_data.get('TXT', [])
             is_spf = 0
             for record in txt_records:
@@ -42,13 +44,10 @@ async def get_dns_details(domain):
             mx_count = dns_data.get('MX', 0)
             ns_count = dns_data.get('NS', 0)
             ttl_num = dns_data.get('A', [])
-            print(f"TXT records for {domain}: {txt_records}")
-            print(f"MX records for {domain}: {mx_count}")
-            print(f"NS records for {domain}: {ns_count}")
             return (is_spf, mx_count, ns_count, ttl_num[0] if len(ttl_num) else 0)
         else:
             async with limiter:
-                print(f"Querying DNS data for {domain}")
+                logger.info(f"Querying DNS data for {domain}")
                 result_dict = {domain: {}}
                 try:
                     # TXT records
@@ -65,13 +64,11 @@ async def get_dns_details(domain):
 
                     # MX records
                     mx_records = await resolver.query(domain, 'MX')
-                    print(f"MX records for {domain}: {len(mx_records)}")
                     result_dict[domain]['MX'] = len(mx_records)
                     mx_count = len(mx_records)
 
                     # NS records
                     ns_records = await resolver.query(domain, 'NS')
-                    print(f"NS records for {domain}: {len(ns_records)}")
                     result_dict[domain]['NS'] = len(ns_records)
                     ns_count = len(ns_records)
 
@@ -79,24 +76,23 @@ async def get_dns_details(domain):
                     ttl_records = await resolver.query(domain, 'A')
                     result_dict[domain]['A'] = [
                         record.ttl for record in ttl_records]
-                    print(
-                        f"TTL records for {domain}: {result_dict[domain]['A']}")
                     ttl_num = result_dict[domain]['A'][0]
 
                     # Save the results to database
                     result = await dns_collection.insert_one({"domain": domain, **result_dict[domain]})
-                    print(
-                        f"Cached DNS data for {domain}: {result.inserted_id}")
+                    logger.info(
+                        f"Saved DNS data to db for {domain}: {result.inserted_id}")
 
                     return (is_spf, mx_count, ns_count, ttl_num if ttl_num else 0)
 
                 except aiodns.error.DNSError as e:
-                    print(f"Error querying in dns details {domain}: {e}")
+                    logger.error(
+                        f"Error querying in dns details {domain}: {e}")
                     result_dict[domain]['error'] = str(e)
                     # dns_data[domain] = result_dict[domain]
                     return (0, 0, 0, 0)
                 except Exception as e:
-                    print(
+                    logger.error(
                         f"Unexpected error querying from dns details {domain}: {e}")
                     result_dict[domain]['error'] = str(e)
                     # dns_data[domain] = result_dict[domain]
