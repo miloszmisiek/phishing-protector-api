@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Body
 from fastapi.encoders import jsonable_encoder
 
-from app.server.database import (
+from app.server.classification import (
     predict_model,
     add_to_whitelist,
     add_to_blacklist

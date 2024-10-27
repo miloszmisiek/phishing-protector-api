@@ -8,7 +8,7 @@ from app.services.logger import logger
 from app.server.database import domain_collection
 
 # load the configuration
-DB_URI = config(AuthKeys.DB_URI)
+DB_URI = config(AuthKeys.DB_URI.value)
 limiter = AsyncLimiter(1, 1)
 
 

@@ -29,7 +29,7 @@ WHOIS_FIELDS_TO_NORMALIZE = ['created', 'creation_date', 'creationdate', 'regist
 
 
 class AuthKeys(str, Enum):
-    SECRET = "SECRET_KEY"
+    SECRET = "AUTH_SECRET_KEY"
     ALGORITHM = "ALGORITHM"
     DB_URI = "DB_URI"
 

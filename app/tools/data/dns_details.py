@@ -7,7 +7,7 @@ from app.services.constants import AuthKeys
 from app.services.logger import logger
 
 # load the configuration
-DB_URI = config(AuthKeys.DB_URI)
+DB_URI = config(AuthKeys.DB_URI.value)
 limiter = AsyncLimiter(1, 1)
 
 def default_serializer(obj):
