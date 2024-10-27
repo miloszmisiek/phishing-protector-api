@@ -7,7 +7,6 @@ from app.server.models.user import UserInDB
 from app.server.database import user_collection
 from decouple import config
 from fastapi import Depends, HTTPException, status
-
 from app.services.constants import AuthKeys, ExceptionMessages
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
