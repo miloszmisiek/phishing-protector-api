@@ -1,0 +1,551 @@
+2024-10-23 18:07:08,197 - DEBUG - Attempting to acquire lock 281473286841248 on /root/.cache/python-tldextract/3.9.20.final__local__ecb11d__tldextract-5.1.2/publicsuffix.org-tlds/de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+2024-10-23 18:07:08,204 - DEBUG - Lock 281473286841248 acquired on /root/.cache/python-tldextract/3.9.20.final__local__ecb11d__tldextract-5.1.2/publicsuffix.org-tlds/de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+2024-10-23 18:07:08,206 - DEBUG - Attempting to acquire lock 281473286964272 on /root/.cache/python-tldextract/3.9.20.final__local__ecb11d__tldextract-5.1.2/urls/62bf135d1c2f3d4db4228b9ecaf507a2.tldextract.json.lock
+2024-10-23 18:07:08,207 - DEBUG - Lock 281473286964272 acquired on /root/.cache/python-tldextract/3.9.20.final__local__ecb11d__tldextract-5.1.2/urls/62bf135d1c2f3d4db4228b9ecaf507a2.tldextract.json.lock
+2024-10-23 18:07:08,211 - DEBUG - Starting new HTTPS connection (1): publicsuffix.org:443
+2024-10-23 18:07:08,386 - DEBUG - https://publicsuffix.org:443 "GET /list/public_suffix_list.dat HTTP/1.1" 200 86480
+2024-10-23 18:07:08,445 - DEBUG - Attempting to release lock 281473286964272 on /root/.cache/python-tldextract/3.9.20.final__local__ecb11d__tldextract-5.1.2/urls/62bf135d1c2f3d4db4228b9ecaf507a2.tldextract.json.lock
+2024-10-23 18:07:08,447 - DEBUG - Lock 281473286964272 released on /root/.cache/python-tldextract/3.9.20.final__local__ecb11d__tldextract-5.1.2/urls/62bf135d1c2f3d4db4228b9ecaf507a2.tldextract.json.lock
+2024-10-23 18:07:08,461 - DEBUG - Attempting to release lock 281473286841248 on /root/.cache/python-tldextract/3.9.20.final__local__ecb11d__tldextract-5.1.2/publicsuffix.org-tlds/de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+2024-10-23 18:07:08,461 - DEBUG - Lock 281473286841248 released on /root/.cache/python-tldextract/3.9.20.final__local__ecb11d__tldextract-5.1.2/publicsuffix.org-tlds/de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+2024-10-23 18:07:08,606 - DEBUG - {"message": "Server selection started", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 67193ab9793a4a630ee9f82e, topology_type: ReplicaSetNoPrimary, servers: [<ServerDescription ('ac-w1jfqfb-shard-00-00.gwc1b1q.mongodb.net', 27017) server_type: Unknown, rtt: None>, <ServerDescription ('ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net', 27017) server_type: Unknown, rtt: None>, <ServerDescription ('ac-w1jfqfb-shard-00-02.gwc1b1q.mongodb.net', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "67193ab9793a4a630ee9f82e"}}
+2024-10-23 18:07:08,607 - INFO - {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 67193ab9793a4a630ee9f82e, topology_type: ReplicaSetNoPrimary, servers: [<ServerDescription ('ac-w1jfqfb-shard-00-00.gwc1b1q.mongodb.net', 27017) server_type: Unknown, rtt: None>, <ServerDescription ('ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net', 27017) server_type: Unknown, rtt: None>, <ServerDescription ('ac-w1jfqfb-shard-00-02.gwc1b1q.mongodb.net', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "67193ab9793a4a630ee9f82e"}, "remainingTimeMS": 29}
+2024-10-23 18:07:08,883 - DEBUG - {"message": "Server selection succeeded", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 67193ab9793a4a630ee9f82e, topology_type: ReplicaSetWithPrimary, servers: [<ServerDescription ('ac-w1jfqfb-shard-00-00.gwc1b1q.mongodb.net', 27017) server_type: Unknown, rtt: None>, <ServerDescription ('ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net', 27017) server_type: RSPrimary, rtt: 0.08394054200107348>, <ServerDescription ('ac-w1jfqfb-shard-00-02.gwc1b1q.mongodb.net', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "67193ab9793a4a630ee9f82e"}, "serverHost": "ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net", "serverPort": 27017}
+2024-10-23 18:07:09,262 - DEBUG - {"clientId": {"$oid": "67193ab9793a4a630ee9f82e"}, "message": "Command started", "command": "{\"find\": \"whitelist\", \"filter\": {\"domain\": \"taxrudioch.com\"}, \"limit\": 1, \"singleBatch\": true, \"lsid\": {\"id\": {\"$binary\": {\"base64\": \"lKtyyA25Qt6UmUmVcP25og==\", \"subType\": \"04\"}}}, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1729706828, \"i\": 44}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"/Aeeelp4X19DwckYp6RBUTi8Mj0=\", \"subType\": \"00\"}}, \"keyId\": 7393820005751586817}}, \"$db\": \"securityData\"}", "commandName": "find", "databaseName": "securityData", "requestId": 783368690, "operationId": 783368690, "driverConnectionId": 1, "serverConnectionId": 23810, "serverHost": "ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net", "serverPort": 27017}
+2024-10-23 18:07:09,309 - DEBUG - {"clientId": {"$oid": "67193ab9793a4a630ee9f82e"}, "message": "Command succeeded", "durationMS": 46.83, "reply": "{\"cursor\": {\"ns\": \"securityData.whitelist\"}, \"ok\": 1.0, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1729706829, \"i\": 14}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"j7ta89vmJ3Al8PO2tnirN8fsihU=\", \"subType\": \"00\"}}, \"keyId\": 7393820005751586817}}, \"operationTime\": {\"$timestamp\": {\"t\": 1729706829, \"i\": 14}}}", "commandName": "find", "databaseName": "securityData", "requestId": 783368690, "operationId": 783368690, "driverConnectionId": 1, "serverConnectionId": 23810, "serverHost": "ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net", "serverPort": 27017}
+2024-10-23 18:07:09,314 - DEBUG - {"message": "Server selection started", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 67193ab9793a4a630ee9f82e, topology_type: ReplicaSetWithPrimary, servers: [<ServerDescription ('ac-w1jfqfb-shard-00-00.gwc1b1q.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.09297804100060603>, <ServerDescription ('ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net', 27017) server_type: RSPrimary, rtt: 0.08394054200107348>, <ServerDescription ('ac-w1jfqfb-shard-00-02.gwc1b1q.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.09172675000081654>]>", "clientId": {"$oid": "67193ab9793a4a630ee9f82e"}}
+2024-10-23 18:07:09,316 - DEBUG - {"message": "Server selection succeeded", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 67193ab9793a4a630ee9f82e, topology_type: ReplicaSetWithPrimary, servers: [<ServerDescription ('ac-w1jfqfb-shard-00-00.gwc1b1q.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.09297804100060603>, <ServerDescription ('ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net', 27017) server_type: RSPrimary, rtt: 0.08394054200107348>, <ServerDescription ('ac-w1jfqfb-shard-00-02.gwc1b1q.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.09172675000081654>]>", "clientId": {"$oid": "67193ab9793a4a630ee9f82e"}, "serverHost": "ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net", "serverPort": 27017}
+2024-10-23 18:07:09,318 - DEBUG - {"clientId": {"$oid": "67193ab9793a4a630ee9f82e"}, "message": "Command started", "command": "{\"find\": \"blacklist\", \"filter\": {\"domain\": \"taxrudioch.com\"}, \"limit\": 1, \"singleBatch\": true, \"lsid\": {\"id\": {\"$binary\": {\"base64\": \"lKtyyA25Qt6UmUmVcP25og==\", \"subType\": \"04\"}}}, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1729706829, \"i\": 14}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"j7ta89vmJ3Al8PO2tnirN8fsihU=\", \"subType\": \"00\"}}, \"keyId\": 7393820005751586817}}, \"$db\": \"securityData\"}", "commandName": "find", "databaseName": "securityData", "requestId": 1102520059, "operationId": 1102520059, "driverConnectionId": 1, "serverConnectionId": 23810, "serverHost": "ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net", "serverPort": 27017}
+2024-10-23 18:07:09,461 - DEBUG - {"clientId": {"$oid": "67193ab9793a4a630ee9f82e"}, "message": "Command succeeded", "durationMS": 143.178, "reply": "{\"cursor\": {\"ns\": \"securityData.blacklist\"}, \"ok\": 1.0, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1729706829, \"i\": 19}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"j7ta89vmJ3Al8PO2tnirN8fsihU=\", \"subType\": \"00\"}}, \"keyId\": 7393820005751586817}}, \"operationTime\": {\"$timestamp\": {\"t\": 1729706829, \"i\": 19}}}", "commandName": "find", "databaseName": "securityData", "requestId": 1102520059, "operationId": 1102520059, "driverConnectionId": 1, "serverConnectionId": 23810, "serverHost": "ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net", "serverPort": 27017}
+2024-10-23 18:07:09,480 - INFO - Processing taxrudioch.com in get_domain_details
+2024-10-23 18:07:09,504 - DEBUG - {"message": "Server selection started", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 67193ab9793a4a630ee9f82d, topology_type: ReplicaSetNoPrimary, servers: [<ServerDescription ('ac-w1jfqfb-shard-00-00.gwc1b1q.mongodb.net', 27017) server_type: Unknown, rtt: None>, <ServerDescription ('ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net', 27017) server_type: Unknown, rtt: None>, <ServerDescription ('ac-w1jfqfb-shard-00-02.gwc1b1q.mongodb.net', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "67193ab9793a4a630ee9f82d"}}
+2024-10-23 18:07:09,507 - INFO - {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 67193ab9793a4a630ee9f82d, topology_type: ReplicaSetNoPrimary, servers: [<ServerDescription ('ac-w1jfqfb-shard-00-00.gwc1b1q.mongodb.net', 27017) server_type: Unknown, rtt: None>, <ServerDescription ('ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net', 27017) server_type: Unknown, rtt: None>, <ServerDescription ('ac-w1jfqfb-shard-00-02.gwc1b1q.mongodb.net', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "67193ab9793a4a630ee9f82d"}, "remainingTimeMS": 29}
+2024-10-23 18:07:09,721 - DEBUG - {"message": "Server selection succeeded", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 67193ab9793a4a630ee9f82d, topology_type: ReplicaSetWithPrimary, servers: [<ServerDescription ('ac-w1jfqfb-shard-00-00.gwc1b1q.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.08363608400031808>, <ServerDescription ('ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net', 27017) server_type: RSPrimary, rtt: 0.07742270800008555>, <ServerDescription ('ac-w1jfqfb-shard-00-02.gwc1b1q.mongodb.net', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "67193ab9793a4a630ee9f82d"}, "serverHost": "ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net", "serverPort": 27017}
+2024-10-23 18:07:10,091 - DEBUG - {"clientId": {"$oid": "67193ab9793a4a630ee9f82d"}, "message": "Command started", "command": "{\"find\": \"whoisRecords\", \"filter\": {\"domain\": \"taxrudioch.com\"}, \"limit\": 1, \"singleBatch\": true, \"lsid\": {\"id\": {\"$binary\": {\"base64\": \"C8S3870VQPSfq7qwrEU3tg==\", \"subType\": \"04\"}}}, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1729706829, \"i\": 37}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"j7ta89vmJ3Al8PO2tnirN8fsihU=\", \"subType\": \"00\"}}, \"keyId\": 7393820005751586817}}, \"$db\": \"securityData\"}", "commandName": "find", "databaseName": "securityData", "requestId": 278722862, "operationId": 278722862, "driverConnectionId": 1, "serverConnectionId": 23294, "serverHost": "ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net", "serverPort": 27017}
+2024-10-23 18:07:10,156 - DEBUG - {"clientId": {"$oid": "67193ab9793a4a630ee9f82d"}, "message": "Command succeeded", "durationMS": 65.774, "reply": "{\"cursor\": {\"ns\": \"securityData.whoisRecords\"}, \"ok\": 1.0, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1729706830, \"i\": 13}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"wz32MbZpXHNXOADQe4kSZc0hhiY=\", \"subType\": \"00\"}}, \"keyId\": 7393820005751586817}}, \"operationTime\": {\"$timestamp\": {\"t\": 1729706830, \"i\": 13}}}", "commandName": "find", "databaseName": "securityData", "requestId": 278722862, "operationId": 278722862, "driverConnectionId": 1, "serverConnectionId": 23294, "serverHost": "ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net", "serverPort": 27017}
+2024-10-23 18:07:10,166 - INFO - Running async WHOIS for taxrudioch.com in get_domain_details
+2024-10-23 18:07:10,910 - ERROR - Async WHOIS failed in get_domain_details for taxrudioch.com, attempting sync WHOIS: Domain not found!
+2024-10-23 18:07:11,451 - ERROR - Error processing taxrudioch.com: No match for "TAXRUDIOCH.COM".
+>>> Last update of whois database: 2024-10-23T18:06:53Z <<<
+
+NOTICE: The expiration date displayed in this record is the date the
+registrar's sponsorship of the domain name registration in the registry is
+currently set to expire. This date does not necessarily reflect the expiration
+date of the domain name registrant's agreement with the sponsoring
+registrar.  Users may consult the sponsoring registrar's Whois database to
+view the registrar's reported date of expiration for this registration.
+
+TERMS OF USE: You are not authorized to access or query our Whois
+database through the use of electronic processes that are high-volume and
+automated except as reasonably necessary to register domain names or
+modify existing registrations; the Data in VeriSign Global Registry
+Services' ("VeriSign") Whois database is provided by VeriSign for
+information purposes only, and to assist persons in obtaining information
+about or related to a domain name registration record. VeriSign does not
+guarantee its accuracy. By submitting a Whois query, you agree to abide
+by the following terms of use: You agree that you may use this Data only
+for lawful purposes and that under no circumstances will you use this Data
+to: (1) allow, enable, or otherwise support the transmission of mass
+unsolicited, commercial advertising or solicitations via e-mail, telephone,
+or facsimile; or (2) enable high volume, automated, electronic processes
+that apply to VeriSign (or its computer systems). The compilation,
+repackaging, dissemination or other use of this Data is expressly
+prohibited without the prior written consent of VeriSign. You agree not to
+use electronic processes that are automated and high-volume to access or
+query the Whois database except as reasonably necessary to register
+domain names or modify existing registrations. VeriSign reserves the right
+to restrict your access to the Whois database in its sole discretion to ensure
+operational stability.  VeriSign may restrict or terminate your access to the
+Whois database for failure to abide by these terms of use. VeriSign
+reserves the right to modify these terms at any time.
+
+The Registry database contains ONLY .COM, .NET, .EDU domains and
+Registrars.
+
+2024-10-23 18:07:11,478 - DEBUG - {"message": "Server selection started", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 67193ab8793a4a630ee9f82c, topology_type: ReplicaSetNoPrimary, servers: [<ServerDescription ('ac-w1jfqfb-shard-00-00.gwc1b1q.mongodb.net', 27017) server_type: Unknown, rtt: None>, <ServerDescription ('ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net', 27017) server_type: Unknown, rtt: None>, <ServerDescription ('ac-w1jfqfb-shard-00-02.gwc1b1q.mongodb.net', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "67193ab8793a4a630ee9f82c"}}
+2024-10-23 18:07:11,483 - INFO - {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 67193ab8793a4a630ee9f82c, topology_type: ReplicaSetNoPrimary, servers: [<ServerDescription ('ac-w1jfqfb-shard-00-00.gwc1b1q.mongodb.net', 27017) server_type: Unknown, rtt: None>, <ServerDescription ('ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net', 27017) server_type: Unknown, rtt: None>, <ServerDescription ('ac-w1jfqfb-shard-00-02.gwc1b1q.mongodb.net', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "67193ab8793a4a630ee9f82c"}, "remainingTimeMS": 29}
+2024-10-23 18:07:11,697 - DEBUG - {"message": "Server selection succeeded", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 67193ab8793a4a630ee9f82c, topology_type: ReplicaSetWithPrimary, servers: [<ServerDescription ('ac-w1jfqfb-shard-00-00.gwc1b1q.mongodb.net', 27017) server_type: Unknown, rtt: None>, <ServerDescription ('ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net', 27017) server_type: RSPrimary, rtt: 0.07368483399841352>, <ServerDescription ('ac-w1jfqfb-shard-00-02.gwc1b1q.mongodb.net', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "67193ab8793a4a630ee9f82c"}, "serverHost": "ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net", "serverPort": 27017}
+2024-10-23 18:07:12,060 - DEBUG - {"clientId": {"$oid": "67193ab8793a4a630ee9f82c"}, "message": "Command started", "command": "{\"find\": \"dnsRecords\", \"filter\": {\"domain\": \"taxrudioch.com\"}, \"limit\": 1, \"singleBatch\": true, \"lsid\": {\"id\": {\"$binary\": {\"base64\": \"9ujDyFrdQD+/MF2dWXf6mw==\", \"subType\": \"04\"}}}, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1729706831, \"i\": 36}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"5AOPhrDF5cCZ/8sXnvTZ+sYwILo=\", \"subType\": \"00\"}}, \"keyId\": 7393820005751586817}}, \"$db\": \"securityData\"}", "commandName": "find", "databaseName": "securityData", "requestId": 1656478042, "operationId": 1656478042, "driverConnectionId": 1, "serverConnectionId": 24055, "serverHost": "ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net", "serverPort": 27017}
+2024-10-23 18:07:12,124 - DEBUG - {"clientId": {"$oid": "67193ab8793a4a630ee9f82c"}, "message": "Command succeeded", "durationMS": 64.263, "reply": "{\"cursor\": {\"ns\": \"securityData.dnsRecords\"}, \"ok\": 1.0, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1729706832, \"i\": 8}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"vFWvxRhdoTRltZodL5VPik5Z2sQ=\", \"subType\": \"00\"}}, \"keyId\": 7393820005751586817}}, \"operationTime\": {\"$timestamp\": {\"t\": 1729706832, \"i\": 8}}}", "commandName": "find", "databaseName": "securityData", "requestId": 1656478042, "operationId": 1656478042, "driverConnectionId": 1, "serverConnectionId": 24055, "serverHost": "ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net", "serverPort": 27017}
+2024-10-23 18:07:12,131 - INFO - Querying DNS data for taxrudioch.com
+2024-10-23 18:07:12,276 - ERROR - Error querying in dns details taxrudioch.com: (4, 'Domain name not found')
+2024-10-23 18:07:12,334 - ERROR - Error checking redirects for https://taxrudioch.com/: Cannot connect to host taxrudioch.com:443 ssl:False [Name or service not known]
+2024-10-23 18:07:12,351 - ERROR - [get_number_of_resolved_ips] Error resolving ips for taxrudioch.com: [Errno -2] Name or service not known
+2024-10-23 18:07:12,352 - INFO - [is_url_shortened] Checking shorted url for taxrudioch.com
+2024-10-23 18:10:12,197 - DEBUG - {"message": "Server selection started", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 67193ab9793a4a630ee9f82e, topology_type: ReplicaSetWithPrimary, servers: [<ServerDescription ('ac-w1jfqfb-shard-00-00.gwc1b1q.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.05317770353943192>, <ServerDescription ('ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net', 27017) server_type: RSPrimary, rtt: 0.05086466727486559>, <ServerDescription ('ac-w1jfqfb-shard-00-02.gwc1b1q.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.0555923494961901>]>", "clientId": {"$oid": "67193ab9793a4a630ee9f82e"}}
+2024-10-23 18:10:12,202 - DEBUG - {"message": "Server selection succeeded", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 67193ab9793a4a630ee9f82e, topology_type: ReplicaSetWithPrimary, servers: [<ServerDescription ('ac-w1jfqfb-shard-00-00.gwc1b1q.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.05317770353943192>, <ServerDescription ('ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net', 27017) server_type: RSPrimary, rtt: 0.05086466727486559>, <ServerDescription ('ac-w1jfqfb-shard-00-02.gwc1b1q.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.0555923494961901>]>", "clientId": {"$oid": "67193ab9793a4a630ee9f82e"}, "serverHost": "ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net", "serverPort": 27017}
+2024-10-23 18:10:12,203 - DEBUG - {"clientId": {"$oid": "67193ab9793a4a630ee9f82e"}, "message": "Command started", "command": "{\"find\": \"whitelist\", \"filter\": {\"domain\": \"google.com\"}, \"limit\": 1, \"singleBatch\": true, \"lsid\": {\"id\": {\"$binary\": {\"base64\": \"lKtyyA25Qt6UmUmVcP25og==\", \"subType\": \"04\"}}}, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1729707009, \"i\": 3}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"fuwqqsGEWQNDIUE++gKO8AlL2f8=\", \"subType\": \"00\"}}, \"keyId\": 7393820005751586817}}, \"$db\": \"securityData\"}", "commandName": "find", "databaseName": "securityData", "requestId": 1784639529, "operationId": 1784639529, "driverConnectionId": 1, "serverConnectionId": 23810, "serverHost": "ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net", "serverPort": 27017}
+2024-10-23 18:10:12,260 - DEBUG - {"clientId": {"$oid": "67193ab9793a4a630ee9f82e"}, "message": "Command succeeded", "durationMS": 56.818, "reply": "{\"cursor\": {\"ns\": \"securityData.whitelist\"}, \"ok\": 1.0, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1729707012, \"i\": 18}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"lCG7ELASAK616K38JfLwU2eLuCk=\", \"subType\": \"00\"}}, \"keyId\": 7393820005751586817}}, \"operationTime\": {\"$timestamp\": {\"t\": 1729707012, \"i\": 18}}}", "commandName": "find", "databaseName": "securityData", "requestId": 1784639529, "operationId": 1784639529, "driverConnectionId": 1, "serverConnectionId": 23810, "serverHost": "ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net", "serverPort": 27017}
+2024-10-23 18:10:12,263 - DEBUG - {"message": "Server selection started", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 67193ab9793a4a630ee9f82e, topology_type: ReplicaSetWithPrimary, servers: [<ServerDescription ('ac-w1jfqfb-shard-00-00.gwc1b1q.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.05317770353943192>, <ServerDescription ('ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net', 27017) server_type: RSPrimary, rtt: 0.05086466727486559>, <ServerDescription ('ac-w1jfqfb-shard-00-02.gwc1b1q.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.0555923494961901>]>", "clientId": {"$oid": "67193ab9793a4a630ee9f82e"}}
+2024-10-23 18:10:12,265 - DEBUG - {"message": "Server selection succeeded", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 67193ab9793a4a630ee9f82e, topology_type: ReplicaSetWithPrimary, servers: [<ServerDescription ('ac-w1jfqfb-shard-00-00.gwc1b1q.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.05317770353943192>, <ServerDescription ('ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net', 27017) server_type: RSPrimary, rtt: 0.05086466727486559>, <ServerDescription ('ac-w1jfqfb-shard-00-02.gwc1b1q.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.0555923494961901>]>", "clientId": {"$oid": "67193ab9793a4a630ee9f82e"}, "serverHost": "ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net", "serverPort": 27017}
+2024-10-23 18:10:12,268 - DEBUG - {"clientId": {"$oid": "67193ab9793a4a630ee9f82e"}, "message": "Command started", "command": "{\"find\": \"blacklist\", \"filter\": {\"domain\": \"google.com\"}, \"limit\": 1, \"singleBatch\": true, \"lsid\": {\"id\": {\"$binary\": {\"base64\": \"lKtyyA25Qt6UmUmVcP25og==\", \"subType\": \"04\"}}}, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1729707012, \"i\": 18}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"lCG7ELASAK616K38JfLwU2eLuCk=\", \"subType\": \"00\"}}, \"keyId\": 7393820005751586817}}, \"$db\": \"securityData\"}", "commandName": "find", "databaseName": "securityData", "requestId": 2103318776, "operationId": 2103318776, "driverConnectionId": 1, "serverConnectionId": 23810, "serverHost": "ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net", "serverPort": 27017}
+2024-10-23 18:10:12,383 - DEBUG - {"clientId": {"$oid": "67193ab9793a4a630ee9f82e"}, "message": "Command succeeded", "durationMS": 114.765, "reply": "{\"cursor\": {\"ns\": \"securityData.blacklist\"}, \"ok\": 1.0, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1729707012, \"i\": 19}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"lCG7ELASAK616K38JfLwU2eLuCk=\", \"subType\": \"00\"}}, \"keyId\": 7393820005751586817}}, \"operationTime\": {\"$timestamp\": {\"t\": 1729707012, \"i\": 19}}}", "commandName": "find", "databaseName": "securityData", "requestId": 2103318776, "operationId": 2103318776, "driverConnectionId": 1, "serverConnectionId": 23810, "serverHost": "ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net", "serverPort": 27017}
+2024-10-23 18:10:12,395 - INFO - Processing google.com in get_domain_details
+2024-10-23 18:10:12,400 - DEBUG - {"message": "Server selection started", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 67193ab9793a4a630ee9f82d, topology_type: ReplicaSetWithPrimary, servers: [<ServerDescription ('ac-w1jfqfb-shard-00-00.gwc1b1q.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.05142794553908014>, <ServerDescription ('ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net', 27017) server_type: RSPrimary, rtt: 0.05368825513331872>, <ServerDescription ('ac-w1jfqfb-shard-00-02.gwc1b1q.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.05217688568932879>]>", "clientId": {"$oid": "67193ab9793a4a630ee9f82d"}}
+2024-10-23 18:10:12,408 - DEBUG - {"message": "Server selection succeeded", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 67193ab9793a4a630ee9f82d, topology_type: ReplicaSetWithPrimary, servers: [<ServerDescription ('ac-w1jfqfb-shard-00-00.gwc1b1q.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.05142794553908014>, <ServerDescription ('ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net', 27017) server_type: RSPrimary, rtt: 0.05368825513331872>, <ServerDescription ('ac-w1jfqfb-shard-00-02.gwc1b1q.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.05217688568932879>]>", "clientId": {"$oid": "67193ab9793a4a630ee9f82d"}, "serverHost": "ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net", "serverPort": 27017}
+2024-10-23 18:10:12,416 - DEBUG - {"clientId": {"$oid": "67193ab9793a4a630ee9f82d"}, "message": "Command started", "command": "{\"find\": \"whoisRecords\", \"filter\": {\"domain\": \"google.com\"}, \"limit\": 1, \"singleBatch\": true, \"lsid\": {\"id\": {\"$binary\": {\"base64\": \"C8S3870VQPSfq7qwrEU3tg==\", \"subType\": \"04\"}}}, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1729707009, \"i\": 52}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"fuwqqsGEWQNDIUE++gKO8AlL2f8=\", \"subType\": \"00\"}}, \"keyId\": 7393820005751586817}}, \"$db\": \"securityData\"}", "commandName": "find", "databaseName": "securityData", "requestId": 1597322404, "operationId": 1597322404, "driverConnectionId": 1, "serverConnectionId": 23294, "serverHost": "ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net", "serverPort": 27017}
+2024-10-23 18:10:12,465 - DEBUG - {"clientId": {"$oid": "67193ab9793a4a630ee9f82d"}, "message": "Command succeeded", "durationMS": 49.308, "reply": "{\"cursor\": {\"firstBatch\": [{\"_id\": {\"$oid\": \"662a7b010c8323879e736b7e\"}, \"domain\": \"google.com\", \"domain_name\": \"google.com\", \"created\": \"1997-09-15T07:00:00+00:00\", \"updated\": \"2019-09-09T15:39:04+00:00\", \"expires\": \"2028-09-13T07:00:00+00:00\", \"registrar\": \"MarkMonitor, Inc.\", \"registrar_iana_id\": \"292\", \"registrar_url\": \"http://www.markmonitor.com\", \"registrar_abuse_email\": \"abusecomplaints@markmonitor.com\", \"registrar_abuse_phone\": \"+1.2086851750\", \"registrant_organization\": \"Google LLC\", \"registrant_state\": \"CA\", \"registrant_country\": \"US\", \"registrant_email\": \"Select Request Email Form at https://domains.markmonitor.com/whois/google.com\", \"dnssec\": \"unsigned\", \"status\": [\"clientUpdateProhibited (https://www.icann.org/epp#clientUpdateProhibited)\", \"clientTransferProhibited (https://www.icann.org/epp#clientTransferProhibited)\", \"clientDeleteProhibited (https://www.icann.org/epp#clientDeleteProhibited)\", \"serverUpdateProhibited (https://www.icann.org/epp#serverUpdateProhibited)\", \"s...", "commandName": "find", "databaseName": "securityData", "requestId": 1597322404, "operationId": 1597322404, "driverConnectionId": 1, "serverConnectionId": 23294, "serverHost": "ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net", "serverPort": 27017}
+2024-10-23 18:10:12,487 - INFO - Using mongo WHOIS data for google.com in get_domain_details
+2024-10-23 18:10:12,491 - DEBUG - {"message": "Server selection started", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 67193ab8793a4a630ee9f82c, topology_type: ReplicaSetWithPrimary, servers: [<ServerDescription ('ac-w1jfqfb-shard-00-00.gwc1b1q.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.05377628327242006>, <ServerDescription ('ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net', 27017) server_type: RSPrimary, rtt: 0.05073875742993898>, <ServerDescription ('ac-w1jfqfb-shard-00-02.gwc1b1q.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.05181065331805251>]>", "clientId": {"$oid": "67193ab8793a4a630ee9f82c"}}
+2024-10-23 18:10:12,492 - DEBUG - {"message": "Server selection succeeded", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 67193ab8793a4a630ee9f82c, topology_type: ReplicaSetWithPrimary, servers: [<ServerDescription ('ac-w1jfqfb-shard-00-00.gwc1b1q.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.05377628327242006>, <ServerDescription ('ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net', 27017) server_type: RSPrimary, rtt: 0.05073875742993898>, <ServerDescription ('ac-w1jfqfb-shard-00-02.gwc1b1q.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.05181065331805251>]>", "clientId": {"$oid": "67193ab8793a4a630ee9f82c"}, "serverHost": "ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net", "serverPort": 27017}
+2024-10-23 18:10:12,494 - DEBUG - {"clientId": {"$oid": "67193ab8793a4a630ee9f82c"}, "message": "Command started", "command": "{\"find\": \"dnsRecords\", \"filter\": {\"domain\": \"google.com\"}, \"limit\": 1, \"singleBatch\": true, \"lsid\": {\"id\": {\"$binary\": {\"base64\": \"9ujDyFrdQD+/MF2dWXf6mw==\", \"subType\": \"04\"}}}, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1729707011, \"i\": 47}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"vDk52TwKYBYwwfpnykXt5u8x88o=\", \"subType\": \"00\"}}, \"keyId\": 7393820005751586817}}, \"$db\": \"securityData\"}", "commandName": "find", "databaseName": "securityData", "requestId": 1939964443, "operationId": 1939964443, "driverConnectionId": 1, "serverConnectionId": 24055, "serverHost": "ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net", "serverPort": 27017}
+2024-10-23 18:10:12,559 - DEBUG - {"clientId": {"$oid": "67193ab8793a4a630ee9f82c"}, "message": "Command succeeded", "durationMS": 64.71000000000001, "reply": "{\"cursor\": {\"firstBatch\": [{\"_id\": {\"$oid\": \"662a7d2f362380519387f2ac\"}, \"domain\": \"google.com\", \"TXT\": [\"facebook-domain-verification=22rm551cu4k0ab0bxsw536tlds4h95\", \"google-site-verification=TV9-DBe4R80X4v0M4U_bd_J9cpOJM0nikft0jAgjmsQ\", \"docusign=05958488-4752-4ef2-95eb-aa7ba8a3bd0e\", \"google-site-verification=wD8N7i1JTNTkezJ49swvWW48f8_9xveREV4oB-0Hf5o\", \"apple-domain-verification=30afIBcvSuDV2PLX\", \"globalsign-smime-dv=CDYX+XFHUw2wml6/Gb8+59BsH31KzUr6c1l2BPvqKX8=\", \"onetrust-domain-verification=de01ed21f2fa4d8781cbc3ffb89cf4ef\", \"MS=E4A68B9AB2BB9670BCE15412F62916164C0B20BB\", \"webexdomainverification.8YX6G=6e6922db-e3e6-4a36-904e-a805c28087fa\", \"docusign=1b0a6754-49b1-4db5-8540-d2c12664b289\", \"v=spf1 include:_spf.google.com ~all\"], \"MX\": 1, \"NS\": 4, \"TTL\": [104]}], \"ns\": \"securityData.dnsRecords\"}, \"ok\": 1.0, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1729707012, \"i\": 29}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"lCG7ELASAK616K38JfLwU2eLuCk=\", \"subType\": \"00\"}}, \"ke...", "commandName": "find", "databaseName": "securityData", "requestId": 1939964443, "operationId": 1939964443, "driverConnectionId": 1, "serverConnectionId": 24055, "serverHost": "ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net", "serverPort": 27017}
+2024-10-23 18:10:12,563 - INFO - Using mongo DNS data for google.com
+2024-10-23 18:10:13,796 - INFO - Checking redirects for https://google.com/
+2024-10-23 18:10:13,848 - INFO - [get_number_of_resolved_ips] Resolved IPs for google.com: [(<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('216.58.209.14', 0)), (<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_DGRAM: 2>, 17, '', ('216.58.209.14', 0)), (<AddressFamily.AF_INET: 2>, <SocketKind.SOCK_RAW: 3>, 0, '', ('216.58.209.14', 0)), (<AddressFamily.AF_INET6: 10>, <SocketKind.SOCK_STREAM: 1>, 6, '', ('2a00:1450:4008:807::200e', 0, 0, 0)), (<AddressFamily.AF_INET6: 10>, <SocketKind.SOCK_DGRAM: 2>, 17, '', ('2a00:1450:4008:807::200e', 0, 0, 0)), (<AddressFamily.AF_INET6: 10>, <SocketKind.SOCK_RAW: 3>, 0, '', ('2a00:1450:4008:807::200e', 0, 0, 0))]
+2024-10-23 18:10:13,851 - INFO - [is_url_shortened] Checking shorted url for google.com
+2024-10-26 18:44:35,167 - DEBUG - loaded lazy attr 'SafeConfigParser': <class 'configparser.ConfigParser'>
+2024-10-26 18:44:35,168 - DEBUG - loaded lazy attr 'NativeStringIO': <class '_io.StringIO'>
+2024-10-26 18:44:35,169 - DEBUG - loaded lazy attr 'BytesIO': <class '_io.BytesIO'>
+2024-10-26 18:44:35,192 - DEBUG - registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+2024-10-26 21:57:10,396 - DEBUG - loaded lazy attr 'SafeConfigParser': <class 'configparser.ConfigParser'>
+2024-10-26 21:57:10,396 - DEBUG - loaded lazy attr 'NativeStringIO': <class '_io.StringIO'>
+2024-10-26 21:57:10,396 - DEBUG - loaded lazy attr 'BytesIO': <class '_io.BytesIO'>
+2024-10-26 21:57:10,710 - DEBUG - registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+2024-10-26 21:59:53,727 - DEBUG - loaded lazy attr 'SafeConfigParser': <class 'configparser.ConfigParser'>
+2024-10-26 21:59:53,728 - DEBUG - loaded lazy attr 'NativeStringIO': <class '_io.StringIO'>
+2024-10-26 21:59:53,728 - DEBUG - loaded lazy attr 'BytesIO': <class '_io.BytesIO'>
+2024-10-26 21:59:53,773 - DEBUG - registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+2024-10-26 21:59:53,777 - ERROR - Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
+2024-10-26 22:01:08,584 - DEBUG - loaded lazy attr 'SafeConfigParser': <class 'configparser.ConfigParser'>
+2024-10-26 22:01:08,584 - DEBUG - loaded lazy attr 'NativeStringIO': <class '_io.StringIO'>
+2024-10-26 22:01:08,585 - DEBUG - loaded lazy attr 'BytesIO': <class '_io.BytesIO'>
+2024-10-26 22:01:08,611 - DEBUG - registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+2024-10-26 22:01:08,615 - ERROR - Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
+2024-10-26 22:01:48,284 - DEBUG - loaded lazy attr 'SafeConfigParser': <class 'configparser.ConfigParser'>
+2024-10-26 22:01:48,285 - DEBUG - loaded lazy attr 'NativeStringIO': <class '_io.StringIO'>
+2024-10-26 22:01:48,285 - DEBUG - loaded lazy attr 'BytesIO': <class '_io.BytesIO'>
+2024-10-26 22:01:48,335 - DEBUG - registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+2024-10-26 22:02:08,701 - DEBUG - Calling on_field_start with no data
+2024-10-26 22:02:08,702 - DEBUG - Calling on_field_name with data[0:10]
+2024-10-26 22:02:08,702 - DEBUG - Calling on_field_data with data[11:19]
+2024-10-26 22:02:08,702 - DEBUG - Calling on_field_end with no data
+2024-10-26 22:02:08,702 - DEBUG - Calling on_field_start with no data
+2024-10-26 22:02:08,702 - DEBUG - Calling on_field_name with data[20:28]
+2024-10-26 22:02:08,702 - DEBUG - Calling on_field_data with data[29:32]
+2024-10-26 22:02:08,702 - DEBUG - Calling on_field_end with no data
+2024-10-26 22:02:08,702 - DEBUG - Calling on_field_start with no data
+2024-10-26 22:02:08,703 - DEBUG - Calling on_field_name with data[33:41]
+2024-10-26 22:02:08,703 - DEBUG - Calling on_field_data with data[42:49]
+2024-10-26 22:02:08,703 - DEBUG - Calling on_field_end with no data
+2024-10-26 22:02:08,703 - DEBUG - Calling on_end with no data
+2024-10-26 22:02:08,709 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2024-10-26 22:02:08,711 - DEBUG - detected 'bcrypt' backend, version '<unknown>'
+2024-10-26 22:02:08,711 - DEBUG - 'bcrypt' backend lacks $2$ support, enabling workaround
+2024-10-26 22:03:35,917 - DEBUG - Calling on_field_start with no data
+2024-10-26 22:03:35,917 - DEBUG - Calling on_field_name with data[0:10]
+2024-10-26 22:03:35,917 - DEBUG - Calling on_field_data with data[11:19]
+2024-10-26 22:03:35,917 - DEBUG - Calling on_field_end with no data
+2024-10-26 22:03:35,917 - DEBUG - Calling on_field_start with no data
+2024-10-26 22:03:35,917 - DEBUG - Calling on_field_name with data[20:28]
+2024-10-26 22:03:35,918 - DEBUG - Calling on_field_data with data[29:32]
+2024-10-26 22:03:35,918 - DEBUG - Calling on_field_end with no data
+2024-10-26 22:03:35,918 - DEBUG - Calling on_field_start with no data
+2024-10-26 22:03:35,918 - DEBUG - Calling on_field_name with data[33:41]
+2024-10-26 22:03:35,918 - DEBUG - Calling on_field_data with data[42:49]
+2024-10-26 22:03:35,918 - DEBUG - Calling on_field_end with no data
+2024-10-26 22:03:35,918 - DEBUG - Calling on_end with no data
+2024-10-26 22:04:29,473 - DEBUG - loaded lazy attr 'SafeConfigParser': <class 'configparser.ConfigParser'>
+2024-10-26 22:04:29,474 - DEBUG - loaded lazy attr 'NativeStringIO': <class '_io.StringIO'>
+2024-10-26 22:04:29,474 - DEBUG - loaded lazy attr 'BytesIO': <class '_io.BytesIO'>
+2024-10-26 22:04:29,510 - DEBUG - registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+2024-10-26 22:04:38,535 - DEBUG - Calling on_field_start with no data
+2024-10-26 22:04:38,536 - DEBUG - Calling on_field_name with data[0:10]
+2024-10-26 22:04:38,536 - DEBUG - Calling on_field_data with data[11:19]
+2024-10-26 22:04:38,536 - DEBUG - Calling on_field_end with no data
+2024-10-26 22:04:38,536 - DEBUG - Calling on_field_start with no data
+2024-10-26 22:04:38,536 - DEBUG - Calling on_field_name with data[20:28]
+2024-10-26 22:04:38,536 - DEBUG - Calling on_field_data with data[29:32]
+2024-10-26 22:04:38,537 - DEBUG - Calling on_field_end with no data
+2024-10-26 22:04:38,537 - DEBUG - Calling on_field_start with no data
+2024-10-26 22:04:38,537 - DEBUG - Calling on_field_name with data[33:41]
+2024-10-26 22:04:38,537 - DEBUG - Calling on_field_data with data[42:49]
+2024-10-26 22:04:38,537 - DEBUG - Calling on_field_end with no data
+2024-10-26 22:04:38,537 - DEBUG - Calling on_end with no data
+2024-10-26 22:04:38,543 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2024-10-26 22:04:38,544 - DEBUG - detected 'bcrypt' backend, version '<unknown>'
+2024-10-26 22:04:38,544 - DEBUG - 'bcrypt' backend lacks $2$ support, enabling workaround
+2024-10-26 22:05:35,696 - DEBUG - loaded lazy attr 'SafeConfigParser': <class 'configparser.ConfigParser'>
+2024-10-26 22:05:35,696 - DEBUG - loaded lazy attr 'NativeStringIO': <class '_io.StringIO'>
+2024-10-26 22:05:35,696 - DEBUG - loaded lazy attr 'BytesIO': <class '_io.BytesIO'>
+2024-10-26 22:05:35,727 - DEBUG - registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+2024-10-26 22:05:47,705 - DEBUG - Calling on_field_start with no data
+2024-10-26 22:05:47,706 - DEBUG - Calling on_field_name with data[0:10]
+2024-10-26 22:05:47,706 - DEBUG - Calling on_field_data with data[11:19]
+2024-10-26 22:05:47,706 - DEBUG - Calling on_field_end with no data
+2024-10-26 22:05:47,706 - DEBUG - Calling on_field_start with no data
+2024-10-26 22:05:47,706 - DEBUG - Calling on_field_name with data[20:28]
+2024-10-26 22:05:47,706 - DEBUG - Calling on_field_data with data[29:32]
+2024-10-26 22:05:47,707 - DEBUG - Calling on_field_end with no data
+2024-10-26 22:05:47,707 - DEBUG - Calling on_field_start with no data
+2024-10-26 22:05:47,707 - DEBUG - Calling on_field_name with data[33:41]
+2024-10-26 22:05:47,707 - DEBUG - Calling on_field_data with data[42:49]
+2024-10-26 22:05:47,707 - DEBUG - Calling on_field_end with no data
+2024-10-26 22:05:47,707 - DEBUG - Calling on_end with no data
+2024-10-26 22:05:47,716 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2024-10-26 22:05:47,717 - DEBUG - detected 'bcrypt' backend, version '<unknown>'
+2024-10-26 22:05:47,718 - DEBUG - 'bcrypt' backend lacks $2$ support, enabling workaround
+2024-10-26 22:11:04,875 - DEBUG - Calling on_field_start with no data
+2024-10-26 22:11:04,876 - DEBUG - Calling on_field_name with data[0:10]
+2024-10-26 22:11:04,876 - DEBUG - Calling on_field_data with data[11:19]
+2024-10-26 22:11:04,876 - DEBUG - Calling on_field_end with no data
+2024-10-26 22:11:04,877 - DEBUG - Calling on_field_start with no data
+2024-10-26 22:11:04,877 - DEBUG - Calling on_field_name with data[20:28]
+2024-10-26 22:11:04,877 - DEBUG - Calling on_field_data with data[29:32]
+2024-10-26 22:11:04,877 - DEBUG - Calling on_field_end with no data
+2024-10-26 22:11:04,877 - DEBUG - Calling on_field_start with no data
+2024-10-26 22:11:04,877 - DEBUG - Calling on_field_name with data[33:41]
+2024-10-26 22:11:04,877 - DEBUG - Calling on_field_data with data[42:49]
+2024-10-26 22:11:04,877 - DEBUG - Calling on_field_end with no data
+2024-10-26 22:11:04,877 - DEBUG - Calling on_end with no data
+2024-10-26 22:11:44,073 - DEBUG - loaded lazy attr 'SafeConfigParser': <class 'configparser.ConfigParser'>
+2024-10-26 22:11:44,073 - DEBUG - loaded lazy attr 'NativeStringIO': <class '_io.StringIO'>
+2024-10-26 22:11:44,073 - DEBUG - loaded lazy attr 'BytesIO': <class '_io.BytesIO'>
+2024-10-26 22:11:44,110 - DEBUG - registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+2024-10-26 22:11:55,725 - DEBUG - Calling on_field_start with no data
+2024-10-26 22:11:55,726 - DEBUG - Calling on_field_name with data[0:10]
+2024-10-26 22:11:55,726 - DEBUG - Calling on_field_data with data[11:19]
+2024-10-26 22:11:55,726 - DEBUG - Calling on_field_end with no data
+2024-10-26 22:11:55,726 - DEBUG - Calling on_field_start with no data
+2024-10-26 22:11:55,726 - DEBUG - Calling on_field_name with data[20:28]
+2024-10-26 22:11:55,726 - DEBUG - Calling on_field_data with data[29:32]
+2024-10-26 22:11:55,726 - DEBUG - Calling on_field_end with no data
+2024-10-26 22:11:55,726 - DEBUG - Calling on_field_start with no data
+2024-10-26 22:11:55,727 - DEBUG - Calling on_field_name with data[33:41]
+2024-10-26 22:11:55,727 - DEBUG - Calling on_field_data with data[42:49]
+2024-10-26 22:11:55,727 - DEBUG - Calling on_field_end with no data
+2024-10-26 22:11:55,727 - DEBUG - Calling on_end with no data
+2024-10-26 22:11:55,733 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2024-10-26 22:11:55,734 - DEBUG - detected 'bcrypt' backend, version '<unknown>'
+2024-10-26 22:11:55,734 - DEBUG - 'bcrypt' backend lacks $2$ support, enabling workaround
+2024-10-26 22:22:48,274 - DEBUG - loaded lazy attr 'SafeConfigParser': <class 'configparser.ConfigParser'>
+2024-10-26 22:22:48,274 - DEBUG - loaded lazy attr 'NativeStringIO': <class '_io.StringIO'>
+2024-10-26 22:22:48,274 - DEBUG - loaded lazy attr 'BytesIO': <class '_io.BytesIO'>
+2024-10-26 22:22:48,304 - DEBUG - registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+2024-10-27 15:38:12,379 - DEBUG - Calling on_field_start with no data
+2024-10-27 15:38:12,381 - DEBUG - Calling on_field_name with data[0:10]
+2024-10-27 15:38:12,382 - DEBUG - Calling on_field_data with data[11:19]
+2024-10-27 15:38:12,382 - DEBUG - Calling on_field_end with no data
+2024-10-27 15:38:12,382 - DEBUG - Calling on_field_start with no data
+2024-10-27 15:38:12,382 - DEBUG - Calling on_field_name with data[20:28]
+2024-10-27 15:38:12,382 - DEBUG - Calling on_field_data with data[29:32]
+2024-10-27 15:38:12,382 - DEBUG - Calling on_field_end with no data
+2024-10-27 15:38:12,382 - DEBUG - Calling on_field_start with no data
+2024-10-27 15:38:12,382 - DEBUG - Calling on_field_name with data[33:41]
+2024-10-27 15:38:12,382 - DEBUG - Calling on_field_data with data[42:50]
+2024-10-27 15:38:12,382 - DEBUG - Calling on_field_end with no data
+2024-10-27 15:38:12,382 - DEBUG - Calling on_end with no data
+2024-10-27 15:38:12,395 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2024-10-27 15:38:12,398 - DEBUG - detected 'bcrypt' backend, version '<unknown>'
+2024-10-27 15:38:12,398 - DEBUG - 'bcrypt' backend lacks $2$ support, enabling workaround
+2024-10-27 15:38:23,598 - DEBUG - Calling on_field_start with no data
+2024-10-27 15:38:23,598 - DEBUG - Calling on_field_name with data[0:10]
+2024-10-27 15:38:23,598 - DEBUG - Calling on_field_data with data[11:19]
+2024-10-27 15:38:23,598 - DEBUG - Calling on_field_end with no data
+2024-10-27 15:38:23,598 - DEBUG - Calling on_field_start with no data
+2024-10-27 15:38:23,598 - DEBUG - Calling on_field_name with data[20:28]
+2024-10-27 15:38:23,598 - DEBUG - Calling on_field_data with data[29:32]
+2024-10-27 15:38:23,598 - DEBUG - Calling on_field_end with no data
+2024-10-27 15:38:23,598 - DEBUG - Calling on_field_start with no data
+2024-10-27 15:38:23,598 - DEBUG - Calling on_field_name with data[33:41]
+2024-10-27 15:38:23,598 - DEBUG - Calling on_field_data with data[42:49]
+2024-10-27 15:38:23,598 - DEBUG - Calling on_field_end with no data
+2024-10-27 15:38:23,599 - DEBUG - Calling on_end with no data
+2024-10-27 15:38:34,105 - DEBUG - loaded lazy attr 'SafeConfigParser': <class 'configparser.ConfigParser'>
+2024-10-27 15:38:34,106 - DEBUG - loaded lazy attr 'NativeStringIO': <class '_io.StringIO'>
+2024-10-27 15:38:34,106 - DEBUG - loaded lazy attr 'BytesIO': <class '_io.BytesIO'>
+2024-10-27 15:38:34,149 - DEBUG - registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+2024-10-27 15:38:43,132 - DEBUG - Calling on_field_start with no data
+2024-10-27 15:38:43,133 - DEBUG - Calling on_field_name with data[0:10]
+2024-10-27 15:38:43,133 - DEBUG - Calling on_field_data with data[11:19]
+2024-10-27 15:38:43,133 - DEBUG - Calling on_field_end with no data
+2024-10-27 15:38:43,134 - DEBUG - Calling on_field_start with no data
+2024-10-27 15:38:43,134 - DEBUG - Calling on_field_name with data[20:28]
+2024-10-27 15:38:43,134 - DEBUG - Calling on_field_data with data[29:32]
+2024-10-27 15:38:43,134 - DEBUG - Calling on_field_end with no data
+2024-10-27 15:38:43,134 - DEBUG - Calling on_field_start with no data
+2024-10-27 15:38:43,134 - DEBUG - Calling on_field_name with data[33:41]
+2024-10-27 15:38:43,134 - DEBUG - Calling on_field_data with data[42:49]
+2024-10-27 15:38:43,134 - DEBUG - Calling on_field_end with no data
+2024-10-27 15:38:43,134 - DEBUG - Calling on_end with no data
+2024-10-27 15:38:43,144 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2024-10-27 15:38:43,145 - DEBUG - detected 'bcrypt' backend, version '<unknown>'
+2024-10-27 15:38:43,146 - DEBUG - 'bcrypt' backend lacks $2$ support, enabling workaround
+2024-10-27 16:01:48,998 - DEBUG - loaded lazy attr 'SafeConfigParser': <class 'configparser.ConfigParser'>
+2024-10-27 16:01:48,998 - DEBUG - loaded lazy attr 'NativeStringIO': <class '_io.StringIO'>
+2024-10-27 16:01:48,998 - DEBUG - loaded lazy attr 'BytesIO': <class '_io.BytesIO'>
+2024-10-27 16:01:49,052 - DEBUG - registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+2024-10-27 16:02:47,609 - DEBUG - loaded lazy attr 'SafeConfigParser': <class 'configparser.ConfigParser'>
+2024-10-27 16:02:47,610 - DEBUG - loaded lazy attr 'NativeStringIO': <class '_io.StringIO'>
+2024-10-27 16:02:47,610 - DEBUG - loaded lazy attr 'BytesIO': <class '_io.BytesIO'>
+2024-10-27 16:02:47,652 - DEBUG - registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+2024-10-27 16:03:06,112 - DEBUG - Calling on_field_start with no data
+2024-10-27 16:03:06,112 - DEBUG - Calling on_field_name with data[0:10]
+2024-10-27 16:03:06,113 - DEBUG - Calling on_field_data with data[11:19]
+2024-10-27 16:03:06,113 - DEBUG - Calling on_field_end with no data
+2024-10-27 16:03:06,113 - DEBUG - Calling on_field_start with no data
+2024-10-27 16:03:06,113 - DEBUG - Calling on_field_name with data[20:28]
+2024-10-27 16:03:06,113 - DEBUG - Calling on_field_data with data[29:32]
+2024-10-27 16:03:06,113 - DEBUG - Calling on_field_end with no data
+2024-10-27 16:03:06,113 - DEBUG - Calling on_field_start with no data
+2024-10-27 16:03:06,113 - DEBUG - Calling on_field_name with data[33:41]
+2024-10-27 16:03:06,113 - DEBUG - Calling on_field_data with data[42:49]
+2024-10-27 16:03:06,113 - DEBUG - Calling on_field_end with no data
+2024-10-27 16:03:06,113 - DEBUG - Calling on_end with no data
+2024-10-27 16:03:06,124 - DEBUG - {"message": "Server selection started", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 671e5617f5b699df251afda9, topology_type: ReplicaSetNoPrimary, servers: [<ServerDescription ('ac-w1jfqfb-shard-00-00.gwc1b1q.mongodb.net', 27017) server_type: Unknown, rtt: None>, <ServerDescription ('ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net', 27017) server_type: Unknown, rtt: None>, <ServerDescription ('ac-w1jfqfb-shard-00-02.gwc1b1q.mongodb.net', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "671e5617f5b699df251afda9"}}
+2024-10-27 16:03:06,125 - INFO - {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 671e5617f5b699df251afda9, topology_type: ReplicaSetNoPrimary, servers: [<ServerDescription ('ac-w1jfqfb-shard-00-00.gwc1b1q.mongodb.net', 27017) server_type: Unknown, rtt: None>, <ServerDescription ('ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net', 27017) server_type: Unknown, rtt: None>, <ServerDescription ('ac-w1jfqfb-shard-00-02.gwc1b1q.mongodb.net', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "671e5617f5b699df251afda9"}, "remainingTimeMS": 29}
+2024-10-27 16:03:06,371 - DEBUG - {"message": "Server selection succeeded", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 671e5617f5b699df251afda9, topology_type: ReplicaSetWithPrimary, servers: [<ServerDescription ('ac-w1jfqfb-shard-00-00.gwc1b1q.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.04575583399855532>, <ServerDescription ('ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net', 27017) server_type: RSPrimary, rtt: 0.04803658300079405>, <ServerDescription ('ac-w1jfqfb-shard-00-02.gwc1b1q.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.04807995798182674>]>", "clientId": {"$oid": "671e5617f5b699df251afda9"}, "serverHost": "ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net", "serverPort": 27017}
+2024-10-27 16:03:06,649 - DEBUG - {"clientId": {"$oid": "671e5617f5b699df251afda9"}, "message": "Command started", "command": "{\"find\": \"user\", \"filter\": {\"username\": \"tim\"}, \"limit\": 1, \"singleBatch\": true, \"lsid\": {\"id\": {\"$binary\": {\"base64\": \"MdEK3SjlTd6/YZTFgkffDw==\", \"subType\": \"04\"}}}, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1730041386, \"i\": 36}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"LTJm+DBtghQk3g5LJ5SL3hlJsBg=\", \"subType\": \"00\"}}, \"keyId\": 7393820005751586817}}, \"$db\": \"securityData\"}", "commandName": "find", "databaseName": "securityData", "requestId": 1784484492, "operationId": 1784484492, "driverConnectionId": 1, "serverConnectionId": 161714, "serverHost": "ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net", "serverPort": 27017}
+2024-10-27 16:03:06,693 - DEBUG - {"clientId": {"$oid": "671e5617f5b699df251afda9"}, "message": "Command succeeded", "durationMS": 45.248999999999995, "reply": "{\"cursor\": {\"firstBatch\": [{\"_id\": {\"$oid\": \"671e5494838ba47bdc177a40\"}, \"username\": \"tim\", \"full_name\": \"Tim Ruscica\", \"email\": \"tim@gmail.com\", \"hashed_password\": \"$2b$12$HxWHkvMuL7WrZad6lcCfluNFj1/Zp63lvP5aUrKlSTYtoFzPXHOtu\"}], \"ns\": \"securityData.user\"}, \"ok\": 1.0, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1730041386, \"i\": 54}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"LTJm+DBtghQk3g5LJ5SL3hlJsBg=\", \"subType\": \"00\"}}, \"keyId\": 7393820005751586817}}, \"operationTime\": {\"$timestamp\": {\"t\": 1730041386, \"i\": 54}}}", "commandName": "find", "databaseName": "securityData", "requestId": 1784484492, "operationId": 1784484492, "driverConnectionId": 1, "serverConnectionId": 161714, "serverHost": "ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net", "serverPort": 27017}
+2024-10-27 16:03:06,696 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2024-10-27 16:03:06,700 - DEBUG - detected 'bcrypt' backend, version '<unknown>'
+2024-10-27 16:03:06,701 - DEBUG - 'bcrypt' backend lacks $2$ support, enabling workaround
+2024-10-27 19:56:26,567 - DEBUG - loaded lazy attr 'SafeConfigParser': <class 'configparser.ConfigParser'>
+2024-10-27 19:56:26,568 - DEBUG - loaded lazy attr 'NativeStringIO': <class '_io.StringIO'>
+2024-10-27 19:56:26,568 - DEBUG - loaded lazy attr 'BytesIO': <class '_io.BytesIO'>
+2024-10-27 19:56:26,617 - DEBUG - registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+2024-10-27 18:58:37,855 - DEBUG - loaded lazy attr 'SafeConfigParser': <class 'configparser.ConfigParser'>
+2024-10-27 18:58:37,856 - DEBUG - loaded lazy attr 'NativeStringIO': <class '_io.StringIO'>
+2024-10-27 18:58:37,857 - DEBUG - loaded lazy attr 'BytesIO': <class '_io.BytesIO'>
+2024-10-27 18:58:37,895 - DEBUG - registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+2024-10-27 19:01:30,331 - DEBUG - loaded lazy attr 'SafeConfigParser': <class 'configparser.ConfigParser'>
+2024-10-27 19:01:30,332 - DEBUG - loaded lazy attr 'NativeStringIO': <class '_io.StringIO'>
+2024-10-27 19:01:30,333 - DEBUG - loaded lazy attr 'BytesIO': <class '_io.BytesIO'>
+2024-10-27 19:01:30,380 - DEBUG - registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+2024-10-27 19:07:19,267 - DEBUG - Calling on_part_begin with no data
+2024-10-27 19:07:19,278 - DEBUG - Calling on_header_field with data[42:61]
+2024-10-27 19:07:19,280 - DEBUG - Calling on_header_value with data[63:89]
+2024-10-27 19:07:19,280 - DEBUG - Calling on_header_end with no data
+2024-10-27 19:07:19,282 - DEBUG - Calling on_headers_finished with no data
+2024-10-27 19:07:19,283 - DEBUG - Calling on_part_data with data[93:96]
+2024-10-27 19:07:19,283 - DEBUG - Calling on_part_end with no data
+2024-10-27 19:07:19,284 - DEBUG - Calling on_part_begin with no data
+2024-10-27 19:07:19,285 - DEBUG - Calling on_header_field with data[140:159]
+2024-10-27 19:07:19,286 - DEBUG - Calling on_header_value with data[161:187]
+2024-10-27 19:07:19,288 - DEBUG - Calling on_header_end with no data
+2024-10-27 19:07:19,289 - DEBUG - Calling on_headers_finished with no data
+2024-10-27 19:07:19,291 - DEBUG - Calling on_part_data with data[191:198]
+2024-10-27 19:07:19,292 - DEBUG - Calling on_part_end with no data
+2024-10-27 19:07:19,293 - DEBUG - Calling on_end with no data
+2024-10-27 19:07:19,347 - DEBUG - {"message": "Server selection started", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 671e8e09be6fa8aa40f5760f, topology_type: ReplicaSetNoPrimary, servers: [<ServerDescription ('ac-w1jfqfb-shard-00-00.gwc1b1q.mongodb.net', 27017) server_type: Unknown, rtt: None>, <ServerDescription ('ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net', 27017) server_type: Unknown, rtt: None>, <ServerDescription ('ac-w1jfqfb-shard-00-02.gwc1b1q.mongodb.net', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "671e8e09be6fa8aa40f5760f"}}
+2024-10-27 19:07:19,358 - INFO - {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 671e8e09be6fa8aa40f5760f, topology_type: ReplicaSetNoPrimary, servers: [<ServerDescription ('ac-w1jfqfb-shard-00-00.gwc1b1q.mongodb.net', 27017) server_type: Unknown, rtt: None>, <ServerDescription ('ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net', 27017) server_type: Unknown, rtt: None>, <ServerDescription ('ac-w1jfqfb-shard-00-02.gwc1b1q.mongodb.net', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "671e8e09be6fa8aa40f5760f"}, "remainingTimeMS": 29}
+2024-10-27 19:07:19,684 - DEBUG - {"message": "Server selection succeeded", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 671e8e09be6fa8aa40f5760f, topology_type: ReplicaSetWithPrimary, servers: [<ServerDescription ('ac-w1jfqfb-shard-00-00.gwc1b1q.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.07920879201265052>, <ServerDescription ('ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net', 27017) server_type: RSPrimary, rtt: 0.07851020799716935>, <ServerDescription ('ac-w1jfqfb-shard-00-02.gwc1b1q.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.08161729099811055>]>", "clientId": {"$oid": "671e8e09be6fa8aa40f5760f"}, "serverHost": "ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net", "serverPort": 27017}
+2024-10-27 19:07:20,062 - DEBUG - {"clientId": {"$oid": "671e8e09be6fa8aa40f5760f"}, "message": "Command started", "command": "{\"find\": \"user\", \"filter\": {\"username\": \"tim\"}, \"limit\": 1, \"singleBatch\": true, \"lsid\": {\"id\": {\"$binary\": {\"base64\": \"GdtQXxrwT+eZkBMXbljtdg==\", \"subType\": \"04\"}}}, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1730056041, \"i\": 103}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"U+1yfcw1PMRTWgx0ejA1rMgkR2g=\", \"subType\": \"00\"}}, \"keyId\": 7393820005751586817}}, \"$db\": \"securityData\"}", "commandName": "find", "databaseName": "securityData", "requestId": 783368690, "operationId": 783368690, "driverConnectionId": 1, "serverConnectionId": 174601, "serverHost": "ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net", "serverPort": 27017}
+2024-10-27 19:07:20,112 - DEBUG - {"clientId": {"$oid": "671e8e09be6fa8aa40f5760f"}, "message": "Command succeeded", "durationMS": 51.571, "reply": "{\"cursor\": {\"firstBatch\": [{\"_id\": {\"$oid\": \"671e5494838ba47bdc177a40\"}, \"username\": \"tim\", \"full_name\": \"Tim Ruscica\", \"email\": \"tim@gmail.com\", \"hashed_password\": \"$2b$12$HxWHkvMuL7WrZad6lcCfluNFj1/Zp63lvP5aUrKlSTYtoFzPXHOtu\"}], \"ns\": \"securityData.user\"}, \"ok\": 1.0, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1730056042, \"i\": 60}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"rkdxl+rGlnQOZ1ZzuRKYNPuFpuQ=\", \"subType\": \"00\"}}, \"keyId\": 7393820005751586817}}, \"operationTime\": {\"$timestamp\": {\"t\": 1730056042, \"i\": 60}}}", "commandName": "find", "databaseName": "securityData", "requestId": 783368690, "operationId": 783368690, "driverConnectionId": 1, "serverConnectionId": 174601, "serverHost": "ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net", "serverPort": 27017}
+2024-10-27 19:07:20,125 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2024-10-27 19:07:20,135 - DEBUG - detected 'bcrypt' backend, version '<unknown>'
+2024-10-27 19:07:20,138 - DEBUG - 'bcrypt' backend lacks $2$ support, enabling workaround
+2024-10-27 19:07:28,121 - DEBUG - Calling on_part_begin with no data
+2024-10-27 19:07:28,124 - DEBUG - Calling on_header_field with data[42:61]
+2024-10-27 19:07:28,126 - DEBUG - Calling on_header_value with data[63:89]
+2024-10-27 19:07:28,127 - DEBUG - Calling on_header_end with no data
+2024-10-27 19:07:28,128 - DEBUG - Calling on_headers_finished with no data
+2024-10-27 19:07:28,129 - DEBUG - Calling on_part_data with data[93:96]
+2024-10-27 19:07:28,130 - DEBUG - Calling on_part_end with no data
+2024-10-27 19:07:28,131 - DEBUG - Calling on_part_begin with no data
+2024-10-27 19:07:28,133 - DEBUG - Calling on_header_field with data[140:159]
+2024-10-27 19:07:28,134 - DEBUG - Calling on_header_value with data[161:187]
+2024-10-27 19:07:28,135 - DEBUG - Calling on_header_end with no data
+2024-10-27 19:07:28,137 - DEBUG - Calling on_headers_finished with no data
+2024-10-27 19:07:28,139 - DEBUG - Calling on_part_data with data[191:198]
+2024-10-27 19:07:28,140 - DEBUG - Calling on_part_end with no data
+2024-10-27 19:07:28,141 - DEBUG - Calling on_end with no data
+2024-10-27 19:07:28,143 - DEBUG - {"message": "Server selection started", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 671e8e09be6fa8aa40f5760f, topology_type: ReplicaSetWithPrimary, servers: [<ServerDescription ('ac-w1jfqfb-shard-00-00.gwc1b1q.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.07920879201265052>, <ServerDescription ('ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net', 27017) server_type: RSPrimary, rtt: 0.07851020799716935>, <ServerDescription ('ac-w1jfqfb-shard-00-02.gwc1b1q.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.08161729099811055>]>", "clientId": {"$oid": "671e8e09be6fa8aa40f5760f"}}
+2024-10-27 19:07:28,145 - DEBUG - {"message": "Server selection succeeded", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 671e8e09be6fa8aa40f5760f, topology_type: ReplicaSetWithPrimary, servers: [<ServerDescription ('ac-w1jfqfb-shard-00-00.gwc1b1q.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.07920879201265052>, <ServerDescription ('ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net', 27017) server_type: RSPrimary, rtt: 0.07851020799716935>, <ServerDescription ('ac-w1jfqfb-shard-00-02.gwc1b1q.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.08161729099811055>]>", "clientId": {"$oid": "671e8e09be6fa8aa40f5760f"}, "serverHost": "ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net", "serverPort": 27017}
+2024-10-27 19:07:28,146 - DEBUG - {"clientId": {"$oid": "671e8e09be6fa8aa40f5760f"}, "message": "Command started", "command": "{\"find\": \"user\", \"filter\": {\"username\": \"tim\"}, \"limit\": 1, \"singleBatch\": true, \"lsid\": {\"id\": {\"$binary\": {\"base64\": \"GdtQXxrwT+eZkBMXbljtdg==\", \"subType\": \"04\"}}}, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1730056042, \"i\": 60}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"rkdxl+rGlnQOZ1ZzuRKYNPuFpuQ=\", \"subType\": \"00\"}}, \"keyId\": 7393820005751586817}}, \"$db\": \"securityData\"}", "commandName": "find", "databaseName": "securityData", "requestId": 1102520059, "operationId": 1102520059, "driverConnectionId": 1, "serverConnectionId": 174601, "serverHost": "ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net", "serverPort": 27017}
+2024-10-27 19:07:28,194 - DEBUG - {"clientId": {"$oid": "671e8e09be6fa8aa40f5760f"}, "message": "Command succeeded", "durationMS": 47.144, "reply": "{\"cursor\": {\"firstBatch\": [{\"_id\": {\"$oid\": \"671e5494838ba47bdc177a40\"}, \"username\": \"tim\", \"full_name\": \"Tim Ruscica\", \"email\": \"tim@gmail.com\", \"hashed_password\": \"$2b$12$HxWHkvMuL7WrZad6lcCfluNFj1/Zp63lvP5aUrKlSTYtoFzPXHOtu\"}], \"ns\": \"securityData.user\"}, \"ok\": 1.0, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1730056050, \"i\": 24}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"rTORxncXptnFYa73EBZtXzsH0VE=\", \"subType\": \"00\"}}, \"keyId\": 7393820005751586817}}, \"operationTime\": {\"$timestamp\": {\"t\": 1730056050, \"i\": 24}}}", "commandName": "find", "databaseName": "securityData", "requestId": 1102520059, "operationId": 1102520059, "driverConnectionId": 1, "serverConnectionId": 174601, "serverHost": "ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net", "serverPort": 27017}
+2024-10-27 19:14:27,075 - DEBUG - loaded lazy attr 'SafeConfigParser': <class 'configparser.ConfigParser'>
+2024-10-27 19:14:27,076 - DEBUG - loaded lazy attr 'NativeStringIO': <class '_io.StringIO'>
+2024-10-27 19:14:27,077 - DEBUG - loaded lazy attr 'BytesIO': <class '_io.BytesIO'>
+2024-10-27 19:14:27,114 - DEBUG - registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+2024-10-27 19:14:42,972 - DEBUG - Calling on_part_begin with no data
+2024-10-27 19:14:42,981 - DEBUG - Calling on_header_field with data[42:61]
+2024-10-27 19:14:42,982 - DEBUG - Calling on_header_value with data[63:89]
+2024-10-27 19:14:42,983 - DEBUG - Calling on_header_end with no data
+2024-10-27 19:14:42,984 - DEBUG - Calling on_headers_finished with no data
+2024-10-27 19:14:42,985 - DEBUG - Calling on_part_data with data[93:96]
+2024-10-27 19:14:42,986 - DEBUG - Calling on_part_end with no data
+2024-10-27 19:14:42,986 - DEBUG - Calling on_part_begin with no data
+2024-10-27 19:14:42,987 - DEBUG - Calling on_header_field with data[140:159]
+2024-10-27 19:14:42,988 - DEBUG - Calling on_header_value with data[161:187]
+2024-10-27 19:14:42,989 - DEBUG - Calling on_header_end with no data
+2024-10-27 19:14:42,990 - DEBUG - Calling on_headers_finished with no data
+2024-10-27 19:14:42,990 - DEBUG - Calling on_part_data with data[191:198]
+2024-10-27 19:14:42,991 - DEBUG - Calling on_part_end with no data
+2024-10-27 19:14:42,992 - DEBUG - Calling on_end with no data
+2024-10-27 19:14:43,034 - DEBUG - {"message": "Server selection started", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 671e9112b783422287901262, topology_type: ReplicaSetNoPrimary, servers: [<ServerDescription ('ac-w1jfqfb-shard-00-00.gwc1b1q.mongodb.net', 27017) server_type: Unknown, rtt: None>, <ServerDescription ('ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net', 27017) server_type: Unknown, rtt: None>, <ServerDescription ('ac-w1jfqfb-shard-00-02.gwc1b1q.mongodb.net', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "671e9112b783422287901262"}}
+2024-10-27 19:14:43,037 - INFO - {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 671e9112b783422287901262, topology_type: ReplicaSetNoPrimary, servers: [<ServerDescription ('ac-w1jfqfb-shard-00-00.gwc1b1q.mongodb.net', 27017) server_type: Unknown, rtt: None>, <ServerDescription ('ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net', 27017) server_type: Unknown, rtt: None>, <ServerDescription ('ac-w1jfqfb-shard-00-02.gwc1b1q.mongodb.net', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "671e9112b783422287901262"}, "remainingTimeMS": 29}
+2024-10-27 19:14:43,330 - DEBUG - {"message": "Server selection succeeded", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 671e9112b783422287901262, topology_type: ReplicaSetWithPrimary, servers: [<ServerDescription ('ac-w1jfqfb-shard-00-00.gwc1b1q.mongodb.net', 27017) server_type: Unknown, rtt: None>, <ServerDescription ('ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net', 27017) server_type: RSPrimary, rtt: 0.0925882910087239>, <ServerDescription ('ac-w1jfqfb-shard-00-02.gwc1b1q.mongodb.net', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "671e9112b783422287901262"}, "serverHost": "ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net", "serverPort": 27017}
+2024-10-27 19:14:43,743 - DEBUG - {"clientId": {"$oid": "671e9112b783422287901262"}, "message": "Command started", "command": "{\"find\": \"user\", \"filter\": {\"username\": \"tim\"}, \"limit\": 1, \"singleBatch\": true, \"lsid\": {\"id\": {\"$binary\": {\"base64\": \"UjKOvcgZRsCdAbu0OvtOWQ==\", \"subType\": \"04\"}}}, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1730056485, \"i\": 5}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"14vgIMK4YWYVFqer2k9Xd7bODfI=\", \"subType\": \"00\"}}, \"keyId\": 7393820005751586817}}, \"$db\": \"securityData\"}", "commandName": "find", "databaseName": "securityData", "requestId": 783368690, "operationId": 783368690, "driverConnectionId": 1, "serverConnectionId": 175026, "serverHost": "ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net", "serverPort": 27017}
+2024-10-27 19:14:43,796 - DEBUG - {"clientId": {"$oid": "671e9112b783422287901262"}, "message": "Command succeeded", "durationMS": 54.659, "reply": "{\"cursor\": {\"firstBatch\": [{\"_id\": {\"$oid\": \"671e5494838ba47bdc177a40\"}, \"username\": \"tim\", \"full_name\": \"Tim Ruscica\", \"email\": \"tim@gmail.com\", \"hashed_password\": \"$2b$12$HxWHkvMuL7WrZad6lcCfluNFj1/Zp63lvP5aUrKlSTYtoFzPXHOtu\"}], \"ns\": \"securityData.user\"}, \"ok\": 1.0, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1730056485, \"i\": 44}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"14vgIMK4YWYVFqer2k9Xd7bODfI=\", \"subType\": \"00\"}}, \"keyId\": 7393820005751586817}}, \"operationTime\": {\"$timestamp\": {\"t\": 1730056485, \"i\": 44}}}", "commandName": "find", "databaseName": "securityData", "requestId": 783368690, "operationId": 783368690, "driverConnectionId": 1, "serverConnectionId": 175026, "serverHost": "ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net", "serverPort": 27017}
+2024-10-27 19:14:43,814 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2024-10-27 19:14:43,823 - DEBUG - detected 'bcrypt' backend, version '<unknown>'
+2024-10-27 19:14:43,826 - DEBUG - 'bcrypt' backend lacks $2$ support, enabling workaround
+2024-10-27 19:14:59,580 - DEBUG - Calling on_part_begin with no data
+2024-10-27 19:14:59,585 - DEBUG - Calling on_header_field with data[42:61]
+2024-10-27 19:14:59,587 - DEBUG - Calling on_header_value with data[63:89]
+2024-10-27 19:14:59,589 - DEBUG - Calling on_header_end with no data
+2024-10-27 19:14:59,590 - DEBUG - Calling on_headers_finished with no data
+2024-10-27 19:14:59,591 - DEBUG - Calling on_part_data with data[93:96]
+2024-10-27 19:14:59,593 - DEBUG - Calling on_part_end with no data
+2024-10-27 19:14:59,594 - DEBUG - Calling on_part_begin with no data
+2024-10-27 19:14:59,595 - DEBUG - Calling on_header_field with data[140:159]
+2024-10-27 19:14:59,596 - DEBUG - Calling on_header_value with data[161:187]
+2024-10-27 19:14:59,597 - DEBUG - Calling on_header_end with no data
+2024-10-27 19:14:59,598 - DEBUG - Calling on_headers_finished with no data
+2024-10-27 19:14:59,599 - DEBUG - Calling on_part_data with data[191:198]
+2024-10-27 19:14:59,599 - DEBUG - Calling on_part_end with no data
+2024-10-27 19:14:59,600 - DEBUG - Calling on_end with no data
+2024-10-27 19:14:59,606 - DEBUG - {"message": "Server selection started", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 671e9112b783422287901262, topology_type: ReplicaSetWithPrimary, servers: [<ServerDescription ('ac-w1jfqfb-shard-00-00.gwc1b1q.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.1098877337994054>, <ServerDescription ('ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net', 27017) server_type: RSPrimary, rtt: 0.0917192078079097>, <ServerDescription ('ac-w1jfqfb-shard-00-02.gwc1b1q.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.08327880859724246>]>", "clientId": {"$oid": "671e9112b783422287901262"}}
+2024-10-27 19:14:59,609 - DEBUG - {"message": "Server selection succeeded", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 671e9112b783422287901262, topology_type: ReplicaSetWithPrimary, servers: [<ServerDescription ('ac-w1jfqfb-shard-00-00.gwc1b1q.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.1098877337994054>, <ServerDescription ('ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net', 27017) server_type: RSPrimary, rtt: 0.0917192078079097>, <ServerDescription ('ac-w1jfqfb-shard-00-02.gwc1b1q.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.08327880859724246>]>", "clientId": {"$oid": "671e9112b783422287901262"}, "serverHost": "ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net", "serverPort": 27017}
+2024-10-27 19:14:59,611 - DEBUG - {"clientId": {"$oid": "671e9112b783422287901262"}, "message": "Command started", "command": "{\"find\": \"user\", \"filter\": {\"username\": \"tim\"}, \"limit\": 1, \"singleBatch\": true, \"lsid\": {\"id\": {\"$binary\": {\"base64\": \"UjKOvcgZRsCdAbu0OvtOWQ==\", \"subType\": \"04\"}}}, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1730056495, \"i\": 17}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"oN1sDKqAIUUyYRAGjTrkiDGuV9Y=\", \"subType\": \"00\"}}, \"keyId\": 7393820005751586817}}, \"$db\": \"securityData\"}", "commandName": "find", "databaseName": "securityData", "requestId": 1365180540, "operationId": 1365180540, "driverConnectionId": 1, "serverConnectionId": 175026, "serverHost": "ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net", "serverPort": 27017}
+2024-10-27 19:14:59,658 - DEBUG - {"clientId": {"$oid": "671e9112b783422287901262"}, "message": "Command succeeded", "durationMS": 47.177, "reply": "{\"cursor\": {\"firstBatch\": [{\"_id\": {\"$oid\": \"671e5494838ba47bdc177a40\"}, \"username\": \"tim\", \"full_name\": \"Tim Ruscica\", \"email\": \"tim@gmail.com\", \"hashed_password\": \"$2b$12$HxWHkvMuL7WrZad6lcCfluNFj1/Zp63lvP5aUrKlSTYtoFzPXHOtu\"}], \"ns\": \"securityData.user\"}, \"ok\": 1.0, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1730056501, \"i\": 29}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"hyFJnjse4CRZaycF3jAjSC+jXE0=\", \"subType\": \"00\"}}, \"keyId\": 7393820005751586817}}, \"operationTime\": {\"$timestamp\": {\"t\": 1730056501, \"i\": 29}}}", "commandName": "find", "databaseName": "securityData", "requestId": 1365180540, "operationId": 1365180540, "driverConnectionId": 1, "serverConnectionId": 175026, "serverHost": "ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net", "serverPort": 27017}
+2024-10-27 19:15:58,745 - DEBUG - loaded lazy attr 'SafeConfigParser': <class 'configparser.ConfigParser'>
+2024-10-27 19:15:58,746 - DEBUG - loaded lazy attr 'NativeStringIO': <class '_io.StringIO'>
+2024-10-27 19:15:58,746 - DEBUG - loaded lazy attr 'BytesIO': <class '_io.BytesIO'>
+2024-10-27 19:15:58,792 - DEBUG - registered 'bcrypt' handler: <class 'passlib.handlers.bcrypt.bcrypt'>
+2024-10-27 19:16:11,222 - DEBUG - Calling on_part_begin with no data
+2024-10-27 19:16:11,230 - DEBUG - Calling on_header_field with data[42:61]
+2024-10-27 19:16:11,231 - DEBUG - Calling on_header_value with data[63:89]
+2024-10-27 19:16:11,232 - DEBUG - Calling on_header_end with no data
+2024-10-27 19:16:11,233 - DEBUG - Calling on_headers_finished with no data
+2024-10-27 19:16:11,234 - DEBUG - Calling on_part_data with data[93:96]
+2024-10-27 19:16:11,235 - DEBUG - Calling on_part_end with no data
+2024-10-27 19:16:11,236 - DEBUG - Calling on_part_begin with no data
+2024-10-27 19:16:11,237 - DEBUG - Calling on_header_field with data[140:159]
+2024-10-27 19:16:11,237 - DEBUG - Calling on_header_value with data[161:187]
+2024-10-27 19:16:11,238 - DEBUG - Calling on_header_end with no data
+2024-10-27 19:16:11,239 - DEBUG - Calling on_headers_finished with no data
+2024-10-27 19:16:11,239 - DEBUG - Calling on_part_data with data[191:198]
+2024-10-27 19:16:11,241 - DEBUG - Calling on_part_end with no data
+2024-10-27 19:16:11,242 - DEBUG - Calling on_end with no data
+2024-10-27 19:16:11,278 - DEBUG - {"message": "Server selection started", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 671e916eeaf205850ffc7bbc, topology_type: ReplicaSetNoPrimary, servers: [<ServerDescription ('ac-w1jfqfb-shard-00-00.gwc1b1q.mongodb.net', 27017) server_type: Unknown, rtt: None>, <ServerDescription ('ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net', 27017) server_type: Unknown, rtt: None>, <ServerDescription ('ac-w1jfqfb-shard-00-02.gwc1b1q.mongodb.net', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "671e916eeaf205850ffc7bbc"}}
+2024-10-27 19:16:11,281 - INFO - {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 671e916eeaf205850ffc7bbc, topology_type: ReplicaSetNoPrimary, servers: [<ServerDescription ('ac-w1jfqfb-shard-00-00.gwc1b1q.mongodb.net', 27017) server_type: Unknown, rtt: None>, <ServerDescription ('ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net', 27017) server_type: Unknown, rtt: None>, <ServerDescription ('ac-w1jfqfb-shard-00-02.gwc1b1q.mongodb.net', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "671e916eeaf205850ffc7bbc"}, "remainingTimeMS": 29}
+2024-10-27 19:16:11,620 - DEBUG - {"message": "Server selection succeeded", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 671e916eeaf205850ffc7bbc, topology_type: ReplicaSetWithPrimary, servers: [<ServerDescription ('ac-w1jfqfb-shard-00-00.gwc1b1q.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.07619670798885636>, <ServerDescription ('ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net', 27017) server_type: RSPrimary, rtt: 0.08533191698370501>, <ServerDescription ('ac-w1jfqfb-shard-00-02.gwc1b1q.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.08053724997444078>]>", "clientId": {"$oid": "671e916eeaf205850ffc7bbc"}, "serverHost": "ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net", "serverPort": 27017}
+2024-10-27 19:16:11,972 - DEBUG - {"clientId": {"$oid": "671e916eeaf205850ffc7bbc"}, "message": "Command started", "command": "{\"find\": \"user\", \"filter\": {\"username\": \"tim\"}, \"limit\": 1, \"singleBatch\": true, \"lsid\": {\"id\": {\"$binary\": {\"base64\": \"yxwtFg6BSau6B3xthMuFrg==\", \"subType\": \"04\"}}}, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1730056573, \"i\": 47}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"vd8tG9xGTWYKag7VeHyksS3KYzo=\", \"subType\": \"00\"}}, \"keyId\": 7393820005751586817}}, \"$db\": \"securityData\"}", "commandName": "find", "databaseName": "securityData", "requestId": 783368690, "operationId": 783368690, "driverConnectionId": 1, "serverConnectionId": 175004, "serverHost": "ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net", "serverPort": 27017}
+2024-10-27 19:16:12,014 - DEBUG - {"clientId": {"$oid": "671e916eeaf205850ffc7bbc"}, "message": "Command succeeded", "durationMS": 43.22, "reply": "{\"cursor\": {\"firstBatch\": [{\"_id\": {\"$oid\": \"671e5494838ba47bdc177a40\"}, \"username\": \"tim\", \"full_name\": \"Tim Ruscica\", \"email\": \"tim@gmail.com\", \"hashed_password\": \"$2b$12$HxWHkvMuL7WrZad6lcCfluNFj1/Zp63lvP5aUrKlSTYtoFzPXHOtu\"}], \"ns\": \"securityData.user\"}, \"ok\": 1.0, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1730056574, \"i\": 1}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"pRehQu2k4XNXd/HhxX/wYPnUu5A=\", \"subType\": \"00\"}}, \"keyId\": 7393820005751586817}}, \"operationTime\": {\"$timestamp\": {\"t\": 1730056574, \"i\": 1}}}", "commandName": "find", "databaseName": "securityData", "requestId": 783368690, "operationId": 783368690, "driverConnectionId": 1, "serverConnectionId": 175004, "serverHost": "ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net", "serverPort": 27017}
+2024-10-27 19:16:12,023 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2024-10-27 19:16:12,026 - DEBUG - detected 'bcrypt' backend, version '<unknown>'
+2024-10-27 19:16:12,028 - DEBUG - 'bcrypt' backend lacks $2$ support, enabling workaround
+2024-10-27 19:18:19,052 - DEBUG - Calling on_part_begin with no data
+2024-10-27 19:18:19,059 - DEBUG - Calling on_header_field with data[42:61]
+2024-10-27 19:18:19,061 - DEBUG - Calling on_header_value with data[63:89]
+2024-10-27 19:18:19,062 - DEBUG - Calling on_header_end with no data
+2024-10-27 19:18:19,062 - DEBUG - Calling on_headers_finished with no data
+2024-10-27 19:18:19,063 - DEBUG - Calling on_part_data with data[93:96]
+2024-10-27 19:18:19,064 - DEBUG - Calling on_part_end with no data
+2024-10-27 19:18:19,065 - DEBUG - Calling on_part_begin with no data
+2024-10-27 19:18:19,066 - DEBUG - Calling on_header_field with data[140:159]
+2024-10-27 19:18:19,066 - DEBUG - Calling on_header_value with data[161:187]
+2024-10-27 19:18:19,067 - DEBUG - Calling on_header_end with no data
+2024-10-27 19:18:19,068 - DEBUG - Calling on_headers_finished with no data
+2024-10-27 19:18:19,069 - DEBUG - Calling on_part_data with data[191:198]
+2024-10-27 19:18:19,070 - DEBUG - Calling on_part_end with no data
+2024-10-27 19:18:19,070 - DEBUG - Calling on_end with no data
+2024-10-27 19:18:19,083 - DEBUG - {"message": "Server selection started", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 671e916eeaf205850ffc7bbc, topology_type: ReplicaSetWithPrimary, servers: [<ServerDescription ('ac-w1jfqfb-shard-00-00.gwc1b1q.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.05198712829963094>, <ServerDescription ('ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net', 27017) server_type: RSPrimary, rtt: 0.05464324315958689>, <ServerDescription ('ac-w1jfqfb-shard-00-02.gwc1b1q.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.05563214892291181>]>", "clientId": {"$oid": "671e916eeaf205850ffc7bbc"}}
+2024-10-27 19:18:19,087 - DEBUG - {"message": "Server selection succeeded", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 671e916eeaf205850ffc7bbc, topology_type: ReplicaSetWithPrimary, servers: [<ServerDescription ('ac-w1jfqfb-shard-00-00.gwc1b1q.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.05198712829963094>, <ServerDescription ('ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net', 27017) server_type: RSPrimary, rtt: 0.05464324315958689>, <ServerDescription ('ac-w1jfqfb-shard-00-02.gwc1b1q.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.05563214892291181>]>", "clientId": {"$oid": "671e916eeaf205850ffc7bbc"}, "serverHost": "ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net", "serverPort": 27017}
+2024-10-27 19:18:19,089 - DEBUG - {"clientId": {"$oid": "671e916eeaf205850ffc7bbc"}, "message": "Command started", "command": "{\"find\": \"user\", \"filter\": {\"username\": \"tim\"}, \"limit\": 1, \"singleBatch\": true, \"lsid\": {\"id\": {\"$binary\": {\"base64\": \"yxwtFg6BSau6B3xthMuFrg==\", \"subType\": \"04\"}}}, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1730056693, \"i\": 48}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"+uPplxVcIhLhk1vHwbcl8Y9WdBg=\", \"subType\": \"00\"}}, \"keyId\": 7393820005751586817}}, \"$db\": \"securityData\"}", "commandName": "find", "databaseName": "securityData", "requestId": 2038664370, "operationId": 2038664370, "driverConnectionId": 1, "serverConnectionId": 175004, "serverHost": "ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net", "serverPort": 27017}
+2024-10-27 19:18:19,145 - DEBUG - {"clientId": {"$oid": "671e916eeaf205850ffc7bbc"}, "message": "Command succeeded", "durationMS": 56.653, "reply": "{\"cursor\": {\"firstBatch\": [{\"_id\": {\"$oid\": \"671e5494838ba47bdc177a40\"}, \"username\": \"tim\", \"full_name\": \"Tim Ruscica\", \"email\": \"tim@gmail.com\", \"hashed_password\": \"$2b$12$HxWHkvMuL7WrZad6lcCfluNFj1/Zp63lvP5aUrKlSTYtoFzPXHOtu\"}], \"ns\": \"securityData.user\"}, \"ok\": 1.0, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1730056700, \"i\": 57}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"TV6TiuvFfeKrg4HIEWvPgBcm9/8=\", \"subType\": \"00\"}}, \"keyId\": 7393820005751586817}}, \"operationTime\": {\"$timestamp\": {\"t\": 1730056700, \"i\": 57}}}", "commandName": "find", "databaseName": "securityData", "requestId": 2038664370, "operationId": 2038664370, "driverConnectionId": 1, "serverConnectionId": 175004, "serverHost": "ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net", "serverPort": 27017}
+2024-10-27 19:18:38,608 - DEBUG - Calling on_part_begin with no data
+2024-10-27 19:18:38,616 - DEBUG - Calling on_header_field with data[42:61]
+2024-10-27 19:18:38,618 - DEBUG - Calling on_header_value with data[63:89]
+2024-10-27 19:18:38,620 - DEBUG - Calling on_header_end with no data
+2024-10-27 19:18:38,621 - DEBUG - Calling on_headers_finished with no data
+2024-10-27 19:18:38,622 - DEBUG - Calling on_part_data with data[93:96]
+2024-10-27 19:18:38,623 - DEBUG - Calling on_part_end with no data
+2024-10-27 19:18:38,623 - DEBUG - Calling on_part_begin with no data
+2024-10-27 19:18:38,624 - DEBUG - Calling on_header_field with data[140:159]
+2024-10-27 19:18:38,625 - DEBUG - Calling on_header_value with data[161:187]
+2024-10-27 19:18:38,626 - DEBUG - Calling on_header_end with no data
+2024-10-27 19:18:38,627 - DEBUG - Calling on_headers_finished with no data
+2024-10-27 19:18:38,628 - DEBUG - Calling on_part_data with data[191:198]
+2024-10-27 19:18:38,629 - DEBUG - Calling on_part_end with no data
+2024-10-27 19:18:38,630 - DEBUG - Calling on_end with no data
+2024-10-27 19:18:38,637 - DEBUG - {"message": "Server selection started", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 671e916eeaf205850ffc7bbc, topology_type: ReplicaSetWithPrimary, servers: [<ServerDescription ('ac-w1jfqfb-shard-00-00.gwc1b1q.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.05272973371327795>, <ServerDescription ('ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net', 27017) server_type: RSPrimary, rtt: 0.051224463820316105>, <ServerDescription ('ac-w1jfqfb-shard-00-02.gwc1b1q.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.05264727359108372>]>", "clientId": {"$oid": "671e916eeaf205850ffc7bbc"}}
+2024-10-27 19:18:38,640 - DEBUG - {"message": "Server selection succeeded", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 671e916eeaf205850ffc7bbc, topology_type: ReplicaSetWithPrimary, servers: [<ServerDescription ('ac-w1jfqfb-shard-00-00.gwc1b1q.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.05272973371327795>, <ServerDescription ('ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net', 27017) server_type: RSPrimary, rtt: 0.051224463820316105>, <ServerDescription ('ac-w1jfqfb-shard-00-02.gwc1b1q.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.05264727359108372>]>", "clientId": {"$oid": "671e916eeaf205850ffc7bbc"}, "serverHost": "ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net", "serverPort": 27017}
+2024-10-27 19:18:38,641 - DEBUG - {"clientId": {"$oid": "671e916eeaf205850ffc7bbc"}, "message": "Command started", "command": "{\"find\": \"user\", \"filter\": {\"username\": \"tim\"}, \"limit\": 1, \"singleBatch\": true, \"lsid\": {\"id\": {\"$binary\": {\"base64\": \"yxwtFg6BSau6B3xthMuFrg==\", \"subType\": \"04\"}}}, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1730056713, \"i\": 46}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"8y96+nn0iXlFcMsHhKToxtf3nyo=\", \"subType\": \"00\"}}, \"keyId\": 7393820005751586817}}, \"$db\": \"securityData\"}", "commandName": "find", "databaseName": "securityData", "requestId": 137806862, "operationId": 137806862, "driverConnectionId": 1, "serverConnectionId": 175004, "serverHost": "ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net", "serverPort": 27017}
+2024-10-27 19:18:38,707 - DEBUG - {"clientId": {"$oid": "671e916eeaf205850ffc7bbc"}, "message": "Command succeeded", "durationMS": 66.042, "reply": "{\"cursor\": {\"firstBatch\": [{\"_id\": {\"$oid\": \"671e5494838ba47bdc177a40\"}, \"username\": \"tim\", \"full_name\": \"Tim Ruscica\", \"email\": \"tim@gmail.com\", \"hashed_password\": \"$2b$12$HxWHkvMuL7WrZad6lcCfluNFj1/Zp63lvP5aUrKlSTYtoFzPXHOtu\"}], \"ns\": \"securityData.user\"}, \"ok\": 1.0, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1730056720, \"i\": 47}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"M/8bbO56P38bb3TlvBltUaGvNgQ=\", \"subType\": \"00\"}}, \"keyId\": 7393820005751586817}}, \"operationTime\": {\"$timestamp\": {\"t\": 1730056720, \"i\": 47}}}", "commandName": "find", "databaseName": "securityData", "requestId": 137806862, "operationId": 137806862, "driverConnectionId": 1, "serverConnectionId": 175004, "serverHost": "ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net", "serverPort": 27017}
+2024-10-27 20:09:34,701 - DEBUG - Calling on_field_start with no data
+2024-10-27 20:09:34,716 - DEBUG - Calling on_field_name with data[0:8]
+2024-10-27 20:09:34,717 - DEBUG - Calling on_field_data with data[9:12]
+2024-10-27 20:09:34,718 - DEBUG - Calling on_field_end with no data
+2024-10-27 20:09:34,719 - DEBUG - Calling on_field_start with no data
+2024-10-27 20:09:34,720 - DEBUG - Calling on_field_name with data[13:21]
+2024-10-27 20:09:34,721 - DEBUG - Calling on_field_data with data[22:29]
+2024-10-27 20:09:34,722 - DEBUG - Calling on_field_end with no data
+2024-10-27 20:09:34,722 - DEBUG - Calling on_end with no data
+2024-10-27 20:09:34,736 - DEBUG - {"message": "Server selection started", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 671e916eeaf205850ffc7bbc, topology_type: ReplicaSetWithPrimary, servers: [<ServerDescription ('ac-w1jfqfb-shard-00-00.gwc1b1q.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.04838278957617451>, <ServerDescription ('ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net', 27017) server_type: RSPrimary, rtt: 0.05574002737272243>, <ServerDescription ('ac-w1jfqfb-shard-00-02.gwc1b1q.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.05193335482442978>]>", "clientId": {"$oid": "671e916eeaf205850ffc7bbc"}}
+2024-10-27 20:09:34,739 - DEBUG - {"message": "Server selection succeeded", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 671e916eeaf205850ffc7bbc, topology_type: ReplicaSetWithPrimary, servers: [<ServerDescription ('ac-w1jfqfb-shard-00-00.gwc1b1q.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.04838278957617451>, <ServerDescription ('ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net', 27017) server_type: RSPrimary, rtt: 0.05574002737272243>, <ServerDescription ('ac-w1jfqfb-shard-00-02.gwc1b1q.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.05193335482442978>]>", "clientId": {"$oid": "671e916eeaf205850ffc7bbc"}, "serverHost": "ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net", "serverPort": 27017}
+2024-10-27 20:09:34,742 - DEBUG - {"clientId": {"$oid": "671e916eeaf205850ffc7bbc"}, "message": "Command started", "command": "{\"find\": \"user\", \"filter\": {\"username\": \"tim\"}, \"limit\": 1, \"singleBatch\": true, \"lsid\": {\"id\": {\"$binary\": {\"base64\": \"g28pjpA6QbGo1BcSu7S28g==\", \"subType\": \"04\"}}}, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1730059766, \"i\": 40}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"9EfODYhGzFph/4giAjiV9m41sMY=\", \"subType\": \"00\"}}, \"keyId\": 7393820005751586817}}, \"$db\": \"securityData\"}", "commandName": "find", "databaseName": "securityData", "requestId": 528433890, "operationId": 528433890, "driverConnectionId": 1, "serverConnectionId": 175004, "serverHost": "ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net", "serverPort": 27017}
+2024-10-27 20:09:34,789 - DEBUG - {"clientId": {"$oid": "671e916eeaf205850ffc7bbc"}, "message": "Command succeeded", "durationMS": 48.553, "reply": "{\"cursor\": {\"firstBatch\": [{\"_id\": {\"$oid\": \"671e5494838ba47bdc177a40\"}, \"username\": \"tim\", \"full_name\": \"Tim Ruscica\", \"email\": \"tim@gmail.com\", \"hashed_password\": \"$2b$12$HxWHkvMuL7WrZad6lcCfluNFj1/Zp63lvP5aUrKlSTYtoFzPXHOtu\"}], \"ns\": \"securityData.user\"}, \"ok\": 1.0, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1730059774, \"i\": 45}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"yGbjUEJjlLnYFEPzCCH039fv/5U=\", \"subType\": \"00\"}}, \"keyId\": 7393820005751586817}}, \"operationTime\": {\"$timestamp\": {\"t\": 1730059774, \"i\": 45}}}", "commandName": "find", "databaseName": "securityData", "requestId": 528433890, "operationId": 528433890, "driverConnectionId": 1, "serverConnectionId": 175004, "serverHost": "ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net", "serverPort": 27017}
+2024-10-27 20:31:38,607 - DEBUG - Calling on_field_start with no data
+2024-10-27 20:31:38,616 - DEBUG - Calling on_field_name with data[0:8]
+2024-10-27 20:31:38,617 - DEBUG - Calling on_field_data with data[9:12]
+2024-10-27 20:31:38,619 - DEBUG - Calling on_field_end with no data
+2024-10-27 20:31:38,620 - DEBUG - Calling on_field_start with no data
+2024-10-27 20:31:38,621 - DEBUG - Calling on_field_name with data[13:21]
+2024-10-27 20:31:38,622 - DEBUG - Calling on_field_data with data[22:28]
+2024-10-27 20:31:38,623 - DEBUG - Calling on_field_end with no data
+2024-10-27 20:31:38,624 - DEBUG - Calling on_end with no data
+2024-10-27 20:31:38,635 - DEBUG - {"message": "Server selection started", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 671e916eeaf205850ffc7bbc, topology_type: ReplicaSetWithPrimary, servers: [<ServerDescription ('ac-w1jfqfb-shard-00-00.gwc1b1q.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.054204995160575316>, <ServerDescription ('ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net', 27017) server_type: RSPrimary, rtt: 0.05318060367461709>, <ServerDescription ('ac-w1jfqfb-shard-00-02.gwc1b1q.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.051246391091356286>]>", "clientId": {"$oid": "671e916eeaf205850ffc7bbc"}}
+2024-10-27 20:31:38,638 - DEBUG - {"message": "Server selection succeeded", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 671e916eeaf205850ffc7bbc, topology_type: ReplicaSetWithPrimary, servers: [<ServerDescription ('ac-w1jfqfb-shard-00-00.gwc1b1q.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.054204995160575316>, <ServerDescription ('ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net', 27017) server_type: RSPrimary, rtt: 0.05318060367461709>, <ServerDescription ('ac-w1jfqfb-shard-00-02.gwc1b1q.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.051246391091356286>]>", "clientId": {"$oid": "671e916eeaf205850ffc7bbc"}, "serverHost": "ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net", "serverPort": 27017}
+2024-10-27 20:31:38,640 - DEBUG - {"clientId": {"$oid": "671e916eeaf205850ffc7bbc"}, "message": "Command started", "command": "{\"find\": \"user\", \"filter\": {\"username\": \"tim\"}, \"limit\": 1, \"singleBatch\": true, \"lsid\": {\"id\": {\"$binary\": {\"base64\": \"g28pjpA6QbGo1BcSu7S28g==\", \"subType\": \"04\"}}}, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1730061098, \"i\": 3}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"I/mcC3vkjFXChBFfO9gryi9hjGw=\", \"subType\": \"00\"}}, \"keyId\": 7393820005751586817}}, \"$db\": \"securityData\"}", "commandName": "find", "databaseName": "securityData", "requestId": 1564003050, "operationId": 1564003050, "driverConnectionId": 1, "serverConnectionId": 175004, "serverHost": "ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net", "serverPort": 27017}
+2024-10-27 20:31:38,685 - DEBUG - {"clientId": {"$oid": "671e916eeaf205850ffc7bbc"}, "message": "Command succeeded", "durationMS": 45.442, "reply": "{\"cursor\": {\"firstBatch\": [{\"_id\": {\"$oid\": \"671e5494838ba47bdc177a40\"}, \"username\": \"tim\", \"full_name\": \"Tim Ruscica\", \"email\": \"tim@gmail.com\", \"hashed_password\": \"$2b$12$HxWHkvMuL7WrZad6lcCfluNFj1/Zp63lvP5aUrKlSTYtoFzPXHOtu\"}], \"ns\": \"securityData.user\"}, \"ok\": 1.0, \"$clusterTime\": {\"clusterTime\": {\"$timestamp\": {\"t\": 1730061098, \"i\": 43}}, \"signature\": {\"hash\": {\"$binary\": {\"base64\": \"I/mcC3vkjFXChBFfO9gryi9hjGw=\", \"subType\": \"00\"}}, \"keyId\": 7393820005751586817}}, \"operationTime\": {\"$timestamp\": {\"t\": 1730061098, \"i\": 43}}}", "commandName": "find", "databaseName": "securityData", "requestId": 1564003050, "operationId": 1564003050, "driverConnectionId": 1, "serverConnectionId": 175004, "serverHost": "ac-w1jfqfb-shard-00-01.gwc1b1q.mongodb.net", "serverPort": 27017}
