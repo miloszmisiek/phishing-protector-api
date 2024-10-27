@@ -1,21 +1,14 @@
-import os
 import asyncwhois
-import certifi
 import whois
 from datetime import datetime, timezone
 from aiolimiter import AsyncLimiter
-import motor.motor_asyncio
 from decouple import config
+from app.services.constants import WHOIS_FIELDS_TO_NORMALIZE, AuthKeys
 from app.services.logger import logger
+from app.server.database import domain_collection
 
 # load the configuration
-DB_URI = config("DB_URI")
-
-mongo_client = motor.motor_asyncio.AsyncIOMotorClient(
-    DB_URI, tlsCAFile=certifi.where())
-database = mongo_client.securityData
-domain_collection = database.whoisRecords
-
+DB_URI = config(AuthKeys.DB_URI)
 limiter = AsyncLimiter(1, 1)
 
 
@@ -38,11 +31,10 @@ def normalize_whois_data(whois_dict):
     """ Normalizes the WHOIS data dictionary by converting all datetime objects to ISO format strings. """
     normalized = {}
     for key, value in whois_dict.items():
-        if key in ['created', 'creation_date', 'creationdate', 'registryCreationDate',
-                   'expires', 'expiration_date', 'registryExpiryDate', 'updated', 'updated_date']:
+        if key in WHOIS_FIELDS_TO_NORMALIZE:
             normalized[key] = to_isoformat(value)
         else:
-            normalized[key] = value  # Copy other values as they are
+            normalized[key] = value
     return normalized
 
 
@@ -51,14 +43,16 @@ async def get_domain_details(domain):
     try:
         domain_data = await domain_collection.find_one({"domain": domain})
         if domain_data:
-            logger.info(f"Using mongo WHOIS data for {domain} in get_domain_details")
+            logger.info(
+                f"Using mongo WHOIS data for {domain} in get_domain_details")
             creation_date = domain_data.get('created')
             expiration_date = domain_data.get('expires')
         else:
             async with limiter:
                 try:
                     # Asynchronous WHOIS query
-                    logger.info(f"Running async WHOIS for {domain} in get_domain_details")
+                    logger.info(
+                        f"Running async WHOIS for {domain} in get_domain_details")
                     _, parsed_dict = await asyncwhois.aio_whois(domain)
                     creation_date = parsed_dict.get('created')
                     expiration_date = parsed_dict.get('expires')

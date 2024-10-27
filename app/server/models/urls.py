@@ -7,7 +7,7 @@ class UrlsData(BaseModel):
     urls: List[str] = Field(..., description="A list of URLs to process")
 
     class Config:
-        schema_extra = {
+        json_schema_extra = {
             "example": {
                 "urls": ["https://www.google.com", "https://www.twitter.com", "https://www.facebook.com"]
             }

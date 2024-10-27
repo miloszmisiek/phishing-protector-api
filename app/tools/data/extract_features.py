@@ -2,19 +2,19 @@ from urllib import parse
 from urllib.parse import parse_qs, urlparse
 import aiohttp
 import tldextract
-from app.tools.check_redirection import check_redirects
-from app.tools.dns_details import get_dns_details
-from app.tools.domains_details import get_domain_details
-from app.tools.async_files_functions import check_tld, count_tld, is_url_shortened
-from app.tools.check_blacklists import google_safebrowsing
-from app.tools.get_number_of_resolved_ips import get_number_of_resolved_ips
+from app.tools.data.check_redirection import check_redirects
+from app.tools.data.dns_details import get_dns_details
+from app.tools.data.domains_details import get_domain_details
+from app.tools.data.async_files_functions import check_tld, count_tld, is_url_shortened
+from app.tools.data.check_blacklists import google_safebrowsing
+from app.tools.data.get_number_of_resolved_ips import get_number_of_resolved_ips
 from app.services.constants import CHARS_LEXICAL, KEYWORDS
-from app.tools.get_asn_from_ip import get_asn_number
-from app.tools.is_email_in_url import is_email_in_url
-from app.tools.contains_keywords import contains_keywords
-from app.tools.is_domain_ip_address import is_domain_ip_address
-from app.tools.count_vowels import count_vowels
-from app.tools.count_chars import count_chars
+from app.tools.data.get_asn_from_ip import get_asn_number
+from app.tools.data.is_email_in_url import is_email_in_url
+from app.tools.data.contains_keywords import contains_keywords
+from app.tools.data.is_domain_ip_address import is_domain_ip_address
+from app.tools.data.count_vowels import count_vowels
+from app.tools.data.count_chars import count_chars
 
 
 def start_url(url):

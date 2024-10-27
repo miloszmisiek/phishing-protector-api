@@ -1,24 +1,14 @@
-import os
-import certifi
-import motor.motor_asyncio
 from aiolimiter import AsyncLimiter
 import aiodns
 from datetime import datetime
-from bson.json_util import dumps
 from decouple import config
-
+from app.server.database import dns_collection
+from app.services.constants import AuthKeys
 from app.services.logger import logger
 
 # load the configuration
-DB_URI = config("DB_URI")
-
-mongo_client = motor.motor_asyncio.AsyncIOMotorClient(
-    DB_URI, tlsCAFile=certifi.where())
-database = mongo_client.securityData
-dns_collection = database.dnsRecords
-
+DB_URI = config(AuthKeys.DB_URI)
 limiter = AsyncLimiter(1, 1)
-
 
 def default_serializer(obj):
     """Handle serialization of objects that JSON cannot serialize natively."""
