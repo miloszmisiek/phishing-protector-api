@@ -1,20 +1,7 @@
-from aiolimiter import AsyncLimiter
 import aiodns
-from datetime import datetime
-from decouple import config
-from app.server.database import dns_collection
-from app.services.constants import AuthKeys
 from app.services.logger import logger
-
-# load the configuration
-DB_URI = config(AuthKeys.DB_URI.value)
-limiter = AsyncLimiter(1, 1)
-
-def default_serializer(obj):
-    """Handle serialization of objects that JSON cannot serialize natively."""
-    if isinstance(obj, datetime):
-        return obj.isoformat()
-    raise TypeError(f"Type not serializable: {type(obj).__name__}")
+from app.server.database import dns_collection
+from app.services.logger import logger
 
 
 async def get_dns_details(domain):
@@ -23,7 +10,7 @@ async def get_dns_details(domain):
     try:
         dns_data = await dns_collection.find_one({"domain": domain})
         if dns_data:
-            logger.info(f"Using mongo DNS data for {domain}")
+            logger.info(f"[get_dns_details] Using mongo DNS data for {domain}")
             txt_records = dns_data.get('TXT', [])
             is_spf = 0
             for record in txt_records:
@@ -36,57 +23,57 @@ async def get_dns_details(domain):
             ttl_num = dns_data.get('A', [])
             return (is_spf, mx_count, ns_count, ttl_num[0] if len(ttl_num) else 0)
         else:
-            async with limiter:
-                logger.info(f"Querying DNS data for {domain}")
-                result_dict = {domain: {}}
-                try:
-                    # TXT records
-                    txt_records = await resolver.query(domain, 'TXT')
-                    txt_data = [record.text.decode('utf-8') if isinstance(record.text, bytes) else record.text
-                                for record in txt_records]
-                    is_spf = 0
-                    for record in txt_data:
-                        if isinstance(record, str):
-                            if 'v=spf1' in record.lower():
-                                is_spf = 1
-                                break
-                    result_dict[domain]['TXT'] = txt_data
+            logger.info(f"[get_dns_details] Querying DNS data for {domain}")
+            result_dict = {domain: {}}
+            try:
+                # TXT records
+                txt_records = await resolver.query(domain, 'TXT')
+                txt_data = [record.text.decode('utf-8') if isinstance(record.text, bytes) else record.text
+                            for record in txt_records]
+                is_spf = 0
+                for record in txt_data:
+                    if isinstance(record, str):
+                        if 'v=spf1' in record.lower():
+                            is_spf = 1
+                            break
+                result_dict[domain]['TXT'] = txt_data
 
-                    # MX records
-                    mx_records = await resolver.query(domain, 'MX')
-                    result_dict[domain]['MX'] = len(mx_records)
-                    mx_count = len(mx_records)
+                # MX records
+                mx_records = await resolver.query(domain, 'MX')
+                result_dict[domain]['MX'] = len(mx_records)
+                mx_count = len(mx_records)
 
-                    # NS records
-                    ns_records = await resolver.query(domain, 'NS')
-                    result_dict[domain]['NS'] = len(ns_records)
-                    ns_count = len(ns_records)
+                # NS records
+                ns_records = await resolver.query(domain, 'NS')
+                result_dict[domain]['NS'] = len(ns_records)
+                ns_count = len(ns_records)
 
-                    # TTL records
-                    ttl_records = await resolver.query(domain, 'A')
-                    result_dict[domain]['A'] = [
-                        record.ttl for record in ttl_records]
-                    ttl_num = result_dict[domain]['A'][0]
+                # TTL records
+                ttl_records = await resolver.query(domain, 'A')
+                result_dict[domain]['A'] = [
+                    record.ttl for record in ttl_records]
+                ttl_num = result_dict[domain]['A'][0]
 
-                    # Save the results to database
-                    result = await dns_collection.insert_one({"domain": domain, **result_dict[domain]})
-                    logger.info(
-                        f"Saved DNS data to db for {domain}: {result.inserted_id}")
+                # Save the results to database
+                result = await dns_collection.insert_one({"domain": domain, **result_dict[domain]})
+                logger.info(
+                    f"[get_dns_details] Saved DNS data to db for {domain}: {result.inserted_id}")
 
-                    return (is_spf, mx_count, ns_count, ttl_num if ttl_num else 0)
+                return (is_spf, mx_count, ns_count, ttl_num if ttl_num else 0)
 
-                except aiodns.error.DNSError as e:
-                    logger.error(
-                        f"Error querying in dns details {domain}: {e}")
-                    result_dict[domain]['error'] = str(e)
-                    # dns_data[domain] = result_dict[domain]
-                    return (0, 0, 0, 0)
-                except Exception as e:
-                    logger.error(
-                        f"Unexpected error querying from dns details {domain}: {e}")
-                    result_dict[domain]['error'] = str(e)
-                    # dns_data[domain] = result_dict[domain]
-                    return (0, 0, 0, 0)
+            except aiodns.error.DNSError as e:
+                logger.error(
+                    f"[get_dns_details] Error querying in dns details {domain}: {e}")
+                result_dict[domain]['error'] = str(e)
+                # dns_data[domain] = result_dict[domain]
+                return (0, 0, 0, 0)
+            except Exception as e:
+                logger.exception(
+                    f"[get_dns_details] Unexpected error querying from dns details {domain}: {e}")
+                result_dict[domain]['error'] = str(e)
+                # dns_data[domain] = result_dict[domain]
+                return (0, 0, 0, 0)
     except Exception as e:
-        print(f"Error querying cached DNS data for {domain}: {e}")
+        logger.error(
+            f"[get_dns_details] Error querying cached DNS data for {domain}: {e}")
         return (0, 0, 0, 0)

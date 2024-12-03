@@ -1,6 +1,7 @@
 import aiohttp
 import certifi
 import ssl
+from app.services.logger import logger
 
 from decouple import config
 
@@ -36,11 +37,11 @@ async def google_safebrowsing(url: str) -> int:
             async with session.post(api_url, headers=headers, json=payload) as response:
                 if response.status == 200:
                     responseData = await response.json()
-                    print(f"Google Safebrowsing API response: {responseData}")
+                    logger.debug(f"[google_safebrowsing] Google Safebrowsing API response for {url}: {responseData}")
                     return 1 if responseData else 0
                 else:
-                    print(f"Failed to query Google Safebrowsing API for {url}")
+                    logger.error(f"[google_safebrowsing] Failed to query {url} with Google Safebrowsing API with response status {response.status} for {url}")
                     return -1
         except Exception as e:
-            print(f"Error querying Google Safebrowsing API for {url}: {e}")
+            logger.exception(f"[google_safebrowsing] Error querying Google Safebrowsing API for {url}: {e}")
             return -1

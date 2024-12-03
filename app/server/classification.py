@@ -8,7 +8,7 @@ from app.services.constants import COLUMNS_TO_DROP
 import joblib
 
 # Load the model
-model = joblib.load("app/server/XGBoostClassifier-best-model.pickle.dat")
+model = joblib.load("app/server/xgb_model_43k.pickle.dat")
 
 # Methods to interact with the database
 async def extract_features_for_all(urls: list):

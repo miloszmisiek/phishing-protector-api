@@ -21,8 +21,8 @@ CHARS_LEXICAL = {
 }
 KEYWORDS = ["server", "client"]
 
-COLUMNS_TO_DROP = ['url', 'asn', 'qty_and_domain', 'qty_asterisk_domain', 'qty_asterisk_path', 'qty_asterisk_query', 'qty_asterisk_url', 'qty_at_domain', 'qty_comma_domain', 'qty_dollar_domain', 'qty_dollar_path', 'qty_equal_domain', 'qty_exclamation_domain',
-                   'qty_hashtag_domain', 'qty_hashtag_path', 'qty_hashtag_query', 'qty_percent_domain', 'qty_plus_domain', 'qty_questionmark_domain', 'qty_questionmark_path', 'qty_slash_domain', 'qty_space_domain', 'qty_tilde_domain', 'qty_tilde_query', 'qty_underline_domain']
+COLUMNS_TO_DROP = ['url', 'qty_and_domain', 'qty_asterisk_domain', 'qty_asterisk_path', 'qty_at_domain', 'qty_comma_domain', 'qty_dollar_domain', 'qty_equal_domain', 'qty_exclamation_domain',
+                   'qty_hashtag_domain', 'qty_hashtag_path', 'qty_hashtag_query', 'qty_plus_domain', 'qty_questionmark_domain', 'qty_questionmark_path', 'qty_slash_domain', 'qty_space_domain', 'qty_tilde_domain', 'qty_underline_domain']
 
 WHOIS_FIELDS_TO_NORMALIZE = ['created', 'creation_date', 'creationdate', 'registryCreationDate',
                              'expires', 'expiration_date', 'registryExpiryDate', 'updated', 'updated_date']

@@ -18,7 +18,7 @@ async def count_tld(text):
     return count
 
 
-async def check_tld(query):
+async def check_tld_in_query_params(query):
     """Check for presence of Top-Level Domains (TLD) in query params asynchronously."""
     async with semaphore:  # Acquire a semaphore slot
         # Read TLDs from file into a list

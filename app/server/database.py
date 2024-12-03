@@ -13,4 +13,6 @@ database = mongo_client.securityData
 dns_collection = database.dnsRecords
 user_collection = database.user
 domain_collection = database.whoisRecords
+whitelist = database.whitelist
+blacklist = database.blacklist
 
