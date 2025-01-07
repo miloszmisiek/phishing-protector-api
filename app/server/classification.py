@@ -8,7 +8,7 @@ from app.services.constants import COLUMNS_TO_DROP
 import joblib
 
 # Load the model
-model = joblib.load("app/server/xgb_model_43k.pickle.dat")
+model = joblib.load("app/server/xgb_model_43k_optimized.pickle.dat")
 
 # Methods to interact with the database
 async def extract_features_for_all(urls: list):
@@ -52,7 +52,7 @@ async def predict_model(urls: list):
             positive_class_proba = prediction_probas[:, 1][0]
             predictions[url] = float(positive_class_proba)
 
-    return {'predictions': predictions}
+    return predictions
 
 
 async def add_to_whitelist(urls: list):

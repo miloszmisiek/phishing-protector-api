@@ -37,3 +37,5 @@ class AuthKeys(str, Enum):
 class ExceptionMessages(str, Enum):
     INVALID_CREDENTIALS = "Could not validate credentials"
     INACTIVE_USER = "Inactive user"
+
+
