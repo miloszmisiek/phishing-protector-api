@@ -123,7 +123,7 @@ async def get_domain_details(domain):
 
         current_time = datetime.now().astimezone()
         logger.debug(f"[get_domain_details] Current time: {current_time}")
-        age_in_days, days_until_expiration = 0, 0
+        creation_timestamp, expiration_timestamp = None, None
 
         # Normalize creation_date
         if creation_date:
@@ -132,23 +132,22 @@ async def get_domain_details(domain):
             creation_date = to_datetime(creation_date)  # Ensure timezone-aware
             logger.debug(
                 f"[get_domain_details] Converted creation_date: {creation_date}")
-            age_in_days = (current_time - creation_date).days
+            creation_timestamp = creation_date.timestamp()
             logger.info(
-                f"[get_domain_details] Domain {domain} age in days: {age_in_days}")
+                f"[get_domain_details] Domain {domain} creation timestamp: {creation_timestamp}")
 
         # Normalize expiration_date
         if expiration_date:
             logger.debug(
                 f"[get_domain_details] Raw expiration_date before conversion: {expiration_date}")
-            expiration_date = to_datetime(
-                expiration_date)  # Ensure timezone-aware
+            expiration_date = to_datetime(expiration_date)  # Ensure timezone-aware
             logger.debug(
                 f"[get_domain_details] Converted expiration_date: {expiration_date}")
-            days_until_expiration = (expiration_date - current_time).days
+            expiration_timestamp = expiration_date.timestamp()
             logger.info(
-                f"[get_domain_details] Domain {domain} days until expiration: {days_until_expiration}")
+                f"[get_domain_details] Domain {domain} expiration timestamp: {expiration_timestamp}")
 
-        return age_in_days, days_until_expiration
+        return creation_timestamp or 0, expiration_timestamp or 0
 
     except Exception as e:
         logger.exception(
